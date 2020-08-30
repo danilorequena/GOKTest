@@ -7,16 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF3C8B0324FAF1E7007FCFCE /* ListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3C8B0224FAF1E7007FCFCE /* ListCoordinator.swift */; };
+		FF3C8B0524FAF34E007FCFCE /* ListStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3C8B0424FAF34E007FCFCE /* ListStorage.swift */; };
 		FFC5AF7724F99EE30087DC02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5AF7624F99EE30087DC02 /* AppDelegate.swift */; };
 		FFC5AF7924F99EE30087DC02 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5AF7824F99EE30087DC02 /* SceneDelegate.swift */; };
-		FFC5AF7B24F99EE30087DC02 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5AF7A24F99EE30087DC02 /* ViewController.swift */; };
-		FFC5AF7E24F99EE30087DC02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFC5AF7C24F99EE30087DC02 /* Main.storyboard */; };
-		FFC5AF8024F99EE30087DC02 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5AF7F24F99EE30087DC02 /* ContentView.swift */; };
 		FFC5AF8324F99EE30087DC02 /* GOKTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FFC5AF8124F99EE30087DC02 /* GOKTest.xcdatamodeld */; };
 		FFC5AF8524F99EE60087DC02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFC5AF8424F99EE60087DC02 /* Assets.xcassets */; };
 		FFC5AF8824F99EE60087DC02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFC5AF8624F99EE60087DC02 /* LaunchScreen.storyboard */; };
 		FFC5AF9324F99EE60087DC02 /* GOKTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5AF9224F99EE60087DC02 /* GOKTestTests.swift */; };
 		FFC5AF9E24F99EE70087DC02 /* GOKTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5AF9D24F99EE70087DC02 /* GOKTestUITests.swift */; };
+		FFC5AFB324F99FA90087DC02 /* Spotlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5AFB224F99FA90087DC02 /* Spotlight.swift */; };
+		FFC5AFB524F9A0910087DC02 /* ModelBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5AFB424F9A0910087DC02 /* ModelBase.swift */; };
+		FFC5AFB724F9A09C0087DC02 /* Cash.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5AFB624F9A09C0087DC02 /* Cash.swift */; };
+		FFC5AFB924F9A0B10087DC02 /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5AFB824F9A0B10087DC02 /* Products.swift */; };
+		FFC5AFBB24F9A5F60087DC02 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5AFBA24F9A5F60087DC02 /* Coordinator.swift */; };
+		FFC5AFBE24FAE8050087DC02 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5AFBC24FAE8050087DC02 /* MainViewController.swift */; };
+		FFC5AFBF24FAE8050087DC02 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFC5AFBD24FAE8050087DC02 /* MainViewController.xib */; };
+		FFC5AFC124FAE9E50087DC02 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5AFC024FAE9E50087DC02 /* ApplicationCoordinator.swift */; };
+		FFD8B8B624FB21EC0080D500 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD8B8B524FB21EC0080D500 /* Constants.swift */; };
+		FFD8B8B824FB24B90080D500 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD8B8B724FB24B90080D500 /* MainViewModel.swift */; };
+		FFD8B8BB24FB337E0080D500 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD8B8B924FB337E0080D500 /* MainCollectionViewCell.swift */; };
+		FFD8B8BC24FB337E0080D500 /* MainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD8B8BA24FB337E0080D500 /* MainCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,12 +48,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FF3C8B0224FAF1E7007FCFCE /* ListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCoordinator.swift; sourceTree = "<group>"; };
+		FF3C8B0424FAF34E007FCFCE /* ListStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListStorage.swift; sourceTree = "<group>"; };
 		FFC5AF7324F99EE30087DC02 /* GOKTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GOKTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFC5AF7624F99EE30087DC02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFC5AF7824F99EE30087DC02 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FFC5AF7A24F99EE30087DC02 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FFC5AF7D24F99EE30087DC02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FFC5AF7F24F99EE30087DC02 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FFC5AF8224F99EE30087DC02 /* GOKTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GOKTest.xcdatamodel; sourceTree = "<group>"; };
 		FFC5AF8424F99EE60087DC02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFC5AF8724F99EE60087DC02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +63,18 @@
 		FFC5AF9924F99EE70087DC02 /* GOKTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GOKTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFC5AF9D24F99EE70087DC02 /* GOKTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOKTestUITests.swift; sourceTree = "<group>"; };
 		FFC5AF9F24F99EE70087DC02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFC5AFB224F99FA90087DC02 /* Spotlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spotlight.swift; sourceTree = "<group>"; };
+		FFC5AFB424F9A0910087DC02 /* ModelBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelBase.swift; sourceTree = "<group>"; };
+		FFC5AFB624F9A09C0087DC02 /* Cash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cash.swift; sourceTree = "<group>"; };
+		FFC5AFB824F9A0B10087DC02 /* Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
+		FFC5AFBA24F9A5F60087DC02 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		FFC5AFBC24FAE8050087DC02 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		FFC5AFBD24FAE8050087DC02 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		FFC5AFC024FAE9E50087DC02 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		FFD8B8B524FB21EC0080D500 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FFD8B8B724FB24B90080D500 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		FFD8B8B924FB337E0080D500 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
+		FFD8B8BA24FB337E0080D500 /* MainCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,15 +125,15 @@
 		FFC5AF7524F99EE30087DC02 /* GOKTest */ = {
 			isa = PBXGroup;
 			children = (
-				FFC5AF7624F99EE30087DC02 /* AppDelegate.swift */,
-				FFC5AF7824F99EE30087DC02 /* SceneDelegate.swift */,
-				FFC5AF7A24F99EE30087DC02 /* ViewController.swift */,
-				FFC5AF7C24F99EE30087DC02 /* Main.storyboard */,
-				FFC5AF7F24F99EE30087DC02 /* ContentView.swift */,
+				FFD8B8B424FB21DA0080D500 /* Utils */,
+				FFC5AFAC24F99F230087DC02 /* Models */,
+				FFC5AFAB24F99F1D0087DC02 /* Views */,
+				FFC5AFAE24F99F300087DC02 /* ViewModels */,
+				FFC5AFAD24F99F290087DC02 /* Controllers */,
+				FFC5AFB024F99F490087DC02 /* Coordinators */,
+				FFC5AFAF24F99F410087DC02 /* Service */,
+				FFC5AFB124F99F6F0087DC02 /* Root */,
 				FFC5AF8424F99EE60087DC02 /* Assets.xcassets */,
-				FFC5AF8624F99EE60087DC02 /* LaunchScreen.storyboard */,
-				FFC5AF8924F99EE60087DC02 /* Info.plist */,
-				FFC5AF8124F99EE30087DC02 /* GOKTest.xcdatamodeld */,
 			);
 			path = GOKTest;
 			sourceTree = "<group>";
@@ -132,6 +154,81 @@
 				FFC5AF9F24F99EE70087DC02 /* Info.plist */,
 			);
 			path = GOKTestUITests;
+			sourceTree = "<group>";
+		};
+		FFC5AFAB24F99F1D0087DC02 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FFC5AFBD24FAE8050087DC02 /* MainViewController.xib */,
+				FFD8B8B924FB337E0080D500 /* MainCollectionViewCell.swift */,
+				FFD8B8BA24FB337E0080D500 /* MainCollectionViewCell.xib */,
+				FFC5AF8624F99EE60087DC02 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FFC5AFAC24F99F230087DC02 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FFC5AFB224F99FA90087DC02 /* Spotlight.swift */,
+				FFC5AFB424F9A0910087DC02 /* ModelBase.swift */,
+				FFC5AFB624F9A09C0087DC02 /* Cash.swift */,
+				FFC5AFB824F9A0B10087DC02 /* Products.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FFC5AFAD24F99F290087DC02 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FFC5AFBC24FAE8050087DC02 /* MainViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FFC5AFAE24F99F300087DC02 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FFD8B8B724FB24B90080D500 /* MainViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		FFC5AFAF24F99F410087DC02 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FF3C8B0424FAF34E007FCFCE /* ListStorage.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		FFC5AFB024F99F490087DC02 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				FFC5AFBA24F9A5F60087DC02 /* Coordinator.swift */,
+				FFC5AFC024FAE9E50087DC02 /* ApplicationCoordinator.swift */,
+				FF3C8B0224FAF1E7007FCFCE /* ListCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		FFC5AFB124F99F6F0087DC02 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				FFC5AF7624F99EE30087DC02 /* AppDelegate.swift */,
+				FFC5AF7824F99EE30087DC02 /* SceneDelegate.swift */,
+				FFC5AF8924F99EE60087DC02 /* Info.plist */,
+				FFC5AF8124F99EE30087DC02 /* GOKTest.xcdatamodeld */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		FFD8B8B424FB21DA0080D500 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FFD8B8B524FB21EC0080D500 /* Constants.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,7 +336,8 @@
 			files = (
 				FFC5AF8824F99EE60087DC02 /* LaunchScreen.storyboard in Resources */,
 				FFC5AF8524F99EE60087DC02 /* Assets.xcassets in Resources */,
-				FFC5AF7E24F99EE30087DC02 /* Main.storyboard in Resources */,
+				FFC5AFBF24FAE8050087DC02 /* MainViewController.xib in Resources */,
+				FFD8B8BC24FB337E0080D500 /* MainCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,11 +362,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFC5AF7B24F99EE30087DC02 /* ViewController.swift in Sources */,
+				FF3C8B0524FAF34E007FCFCE /* ListStorage.swift in Sources */,
+				FFC5AFB324F99FA90087DC02 /* Spotlight.swift in Sources */,
 				FFC5AF8324F99EE30087DC02 /* GOKTest.xcdatamodeld in Sources */,
+				FFC5AFB724F9A09C0087DC02 /* Cash.swift in Sources */,
 				FFC5AF7724F99EE30087DC02 /* AppDelegate.swift in Sources */,
-				FFC5AF8024F99EE30087DC02 /* ContentView.swift in Sources */,
+				FFD8B8B824FB24B90080D500 /* MainViewModel.swift in Sources */,
+				FFC5AFB924F9A0B10087DC02 /* Products.swift in Sources */,
+				FFD8B8BB24FB337E0080D500 /* MainCollectionViewCell.swift in Sources */,
+				FFC5AFB524F9A0910087DC02 /* ModelBase.swift in Sources */,
 				FFC5AF7924F99EE30087DC02 /* SceneDelegate.swift in Sources */,
+				FF3C8B0324FAF1E7007FCFCE /* ListCoordinator.swift in Sources */,
+				FFC5AFBB24F9A5F60087DC02 /* Coordinator.swift in Sources */,
+				FFD8B8B624FB21EC0080D500 /* Constants.swift in Sources */,
+				FFC5AFBE24FAE8050087DC02 /* MainViewController.swift in Sources */,
+				FFC5AFC124FAE9E50087DC02 /* ApplicationCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,14 +412,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FFC5AF7C24F99EE30087DC02 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FFC5AF7D24F99EE30087DC02 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FFC5AF8624F99EE60087DC02 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -446,7 +546,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SM9KCJGMUP;
-				INFOPLIST_FILE = GOKTest/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GOKTest/Root/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,7 +554,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = dobigaster.GOKTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -465,7 +565,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SM9KCJGMUP;
-				INFOPLIST_FILE = GOKTest/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GOKTest/Root/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -473,7 +573,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = dobigaster.GOKTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
