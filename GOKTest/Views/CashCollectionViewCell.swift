@@ -1,15 +1,16 @@
 //
-//  MainCollectionViewCell.swift
+//  CashCollectionViewCell.swift
 //  GOKTest
 //
-//  Created by Danilo Requena on 29/08/20.
+//  Created by Danilo Requena on 30/08/20.
 //
 
 import UIKit
 
-class MainCollectionViewCell: UICollectionViewCell {
+class CashCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var cashImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,10 +24,11 @@ class MainCollectionViewCell: UICollectionViewCell {
         return String(describing: self)
     }
     
-    func setupCell(logo: Products) {
-        if let logoPath = logo.imageURL {
+    func setupCell(logo: Spotlight) {
+        if let logoPath = logo.bannerURL {
             guard let data = try? Data(contentsOf: URL(string: logoPath)!) else { return }
-            self.image.image = UIImage(data: data)
+            self.cashImage.image = UIImage(data: data)
+            self.cashImage.layer.cornerRadius = 10
         }
         layer.shadowColor = UIColor.lightGray.cgColor
         layer.shadowOffset = CGSize(width: 0, height: 2.0)

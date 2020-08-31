@@ -19,9 +19,9 @@ class ApplicationCoordinator: Coordinator {
     rootViewController.navigationBar.prefersLargeTitles = true
     
     // O código abaixo é para fins de teste // 5
-    let emptyViewController = MainViewController()
+    let mainViewController = MainViewController()
 //    emptyViewController.view.backgroundColor = .cyan
-    rootViewController.pushViewController (emptyViewController, animated: false )
+    rootViewController.pushViewController (mainViewController, animated: false )
   }
   
   func  start() {   // 6

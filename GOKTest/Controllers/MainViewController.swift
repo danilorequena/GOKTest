@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import EMTNeumorphicView
 
 protocol MainViewControllerDelegate: class {
     func MainViewControllerDidSelectList(_ selectedList: ModelBase)
@@ -33,27 +34,41 @@ class MainViewController: UIViewController {
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func setupCollectionView() {
         productsCollectionView.register(MainCollectionViewCell.loadNib(), forCellWithReuseIdentifier: MainCollectionViewCell.identifier())
+        spotLightCollectionView.register(CashCollectionViewCell.loadNib(), forCellWithReuseIdentifier: CashCollectionViewCell.identifier())
+        
+        
         productsCollectionView.delegate = self
         productsCollectionView.dataSource = self
+        spotLightCollectionView.delegate = self
+        spotLightCollectionView.dataSource = self
+        
+        (productsCollectionView.collectionViewLayout as! UICollectionViewFlowLayout).itemSize = CGSize(width: 110, height: 110)
+        (spotLightCollectionView.collectionViewLayout as! UICollectionViewFlowLayout).itemSize = CGSize(width: 300, height: 160)
         
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.productsCollectionView {
-            return viewModel?.list.count ?? 1
+            return viewModel?.listProdutcs.count ?? 1
+        } else if collectionView == self.spotLightCollectionView {
+            return viewModel?.listSpotlight.count ?? 1
         } else {
             return 1
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cellProducts = collectionView.dequeueReusableCell(withReuseIdentifier: MainCollectionViewCell.identifier(), for: indexPath) as! MainCollectionViewCell
         if collectionView == self.productsCollectionView {
-            let data = viewModel?.list[indexPath.item]
+            let cellProducts = collectionView.dequeueReusableCell(withReuseIdentifier: MainCollectionViewCell.identifier(), for: indexPath) as! MainCollectionViewCell
+            let data = viewModel?.listProdutcs[indexPath.item]
             cellProducts.setupCell(logo: data!)
+            cellProducts.backgroundColor = .white
             return cellProducts
         } else {
-            return cellProducts
+            let cellSpotlight = collectionView.dequeueReusableCell(withReuseIdentifier: CashCollectionViewCell.identifier(), for: indexPath) as! CashCollectionViewCell
+            let data = viewModel?.listSpotlight[indexPath.item]
+            cellSpotlight.setupCell(logo: data!)
+            return cellSpotlight
         }
     }
     
@@ -71,6 +86,7 @@ extension MainViewController: MainViewModelDelegate {
         func successList() {
             DispatchQueue.main.async {
                 self.productsCollectionView.reloadData()
+                self.spotLightCollectionView.reloadData()
                 print("caiu aqui")
             }
         }

@@ -18,10 +18,12 @@ protocol MainViewModelDelegate: AnyObject {
 
 class MainViewModel: MainViewModelProtocol {
     weak var delegate: MainViewModelDelegate?
-    var list: [Products] = []
+    var listProdutcs: [Products] = []
+    var listSpotlight: [Spotlight] = []
     func fetchData() {
         ListStorage.loadList(urlString: Constants.urlPath) { (lists) in
-            self.list += lists.products!
+            self.listProdutcs += lists.products!
+            self.listSpotlight += lists.spotlight!
             self.delegate?.successList()
         } onError: { (error) in
             self.delegate?.errorList(error: "\(error)")
