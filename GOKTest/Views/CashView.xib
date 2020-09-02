@@ -11,27 +11,44 @@
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="Gfj-CR-wel"/>
                 <outlet property="imageCash" destination="ubM-ZH-024" id="e0p-9U-HE8"/>
+                <outlet property="titleLabel" destination="cQH-nF-RGH" id="slm-vf-WnT"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="132"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="184"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ubM-ZH-024">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="132"/>
-                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="b2A-zM-uNg">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="184"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQH-nF-RGH">
+                            <rect key="frame" x="7" y="0.0" width="400" height="32"/>
+                            <color key="tintColor" red="0.17370882630000001" green="0.19784104820000001" blue="0.2745192051" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="FPA-MC-EOw"/>
+                                <constraint firstAttribute="width" constant="400" id="dC4-uC-qD7"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ubM-ZH-024">
+                            <rect key="frame" x="0.0" y="32" width="414" height="152"/>
+                        </imageView>
+                    </subviews>
+                </stackView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ubM-ZH-024" secondAttribute="bottom" id="EQG-YO-vze"/>
-                <constraint firstItem="ubM-ZH-024" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="GdY-Az-OE9"/>
-                <constraint firstItem="ubM-ZH-024" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="X2a-dd-dfq"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ubM-ZH-024" secondAttribute="trailing" id="gUI-yO-uUi"/>
+                <constraint firstItem="b2A-zM-uNg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="IdK-Qm-fRe"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="b2A-zM-uNg" secondAttribute="bottom" id="Myl-LB-iSH"/>
+                <constraint firstItem="b2A-zM-uNg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="b2T-Ln-vt0"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="b2A-zM-uNg" secondAttribute="trailing" id="rQW-Pz-znN"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="-281.15942028985512" y="-421.20535714285711"/>
+            <point key="canvasLocation" x="-281.15942028985512" y="-424.55357142857139"/>
         </view>
     </objects>
 </document>
