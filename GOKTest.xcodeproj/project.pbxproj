@@ -10,6 +10,7 @@
 		97247377E5F51268C6A04431 /* Pods_GOKTest_GOKTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CDE40A3FCA31AE70387E672 /* Pods_GOKTest_GOKTestUITests.framework */; };
 		D4017E34335DDBA7217A856B /* Pods_GOKTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A59F01EF086D9386C71F7505 /* Pods_GOKTest.framework */; };
 		D5711F8BE1B5D9BD2684CB23 /* Pods_GOKTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 870507AF06220D9F2ED6275B /* Pods_GOKTestTests.framework */; };
+		FF1A94FD250024A300E8E680 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A94FC250024A300E8E680 /* UIView+Extension.swift */; };
 		FF3C8B0324FAF1E7007FCFCE /* ListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3C8B0224FAF1E7007FCFCE /* ListCoordinator.swift */; };
 		FF3C8B0524FAF34E007FCFCE /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3C8B0424FAF34E007FCFCE /* Service.swift */; };
 		FF4D0BAB24FC651B00C50B2D /* SpotlightCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D0BA924FC651B00C50B2D /* SpotlightCollectionViewCell.swift */; };
@@ -64,6 +65,7 @@
 		CE5AF7A1B265AA5D533CE6C7 /* Pods-GOKTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GOKTest.release.xcconfig"; path = "Target Support Files/Pods-GOKTest/Pods-GOKTest.release.xcconfig"; sourceTree = "<group>"; };
 		E5FCB0451DAEE078505B911C /* Pods-GOKTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GOKTest.debug.xcconfig"; path = "Target Support Files/Pods-GOKTest/Pods-GOKTest.debug.xcconfig"; sourceTree = "<group>"; };
 		E7083D74532BC6F15F8F39B8 /* Pods-GOKTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GOKTestTests.release.xcconfig"; path = "Target Support Files/Pods-GOKTestTests/Pods-GOKTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		FF1A94FC250024A300E8E680 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		FF3C8B0224FAF1E7007FCFCE /* ListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCoordinator.swift; sourceTree = "<group>"; };
 		FF3C8B0424FAF34E007FCFCE /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		FF4D0BA924FC651B00C50B2D /* SpotlightCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -148,6 +150,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		FF1A94FB2500246D00E8E680 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FF1A94FC250024A300E8E680 /* UIView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		FFC5AF6A24F99EE30087DC02 = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +183,7 @@
 		FFC5AF7524F99EE30087DC02 /* GOKTest */ = {
 			isa = PBXGroup;
 			children = (
+				FF1A94FB2500246D00E8E680 /* Extensions */,
 				FFD8B8B424FB21DA0080D500 /* Utils */,
 				FFC5AFAC24F99F230087DC02 /* Models */,
 				FFC5AFAB24F99F1D0087DC02 /* Views */,
@@ -536,6 +547,7 @@
 				FFC5AFB524F9A0910087DC02 /* ModelBase.swift in Sources */,
 				FFC5AF7924F99EE30087DC02 /* SceneDelegate.swift in Sources */,
 				FF3C8B0324FAF1E7007FCFCE /* ListCoordinator.swift in Sources */,
+				FF1A94FD250024A300E8E680 /* UIView+Extension.swift in Sources */,
 				FFC5AFBB24F9A5F60087DC02 /* Coordinator.swift in Sources */,
 				FFD8B8B624FB21EC0080D500 /* Constants.swift in Sources */,
 				FF4D0BAB24FC651B00C50B2D /* SpotlightCollectionViewCell.swift in Sources */,

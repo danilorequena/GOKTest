@@ -16,8 +16,7 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var spotLightCollectionView: UICollectionView!
     @IBOutlet weak var productsCollectionView: UICollectionView!
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var cashView: UIView!
+    @IBOutlet weak var cashViewBanner: CashView!
     
     var viewModel: MainViewModel?
     
@@ -27,19 +26,6 @@ class MainViewController: UIViewController {
         setupCollectionView()
         viewModel?.delegate = self
         viewModel?.fetchDataCollections()
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-    }
-    
-    func setupCashView(logo: Cash) {
-        if let path = logo.bannerURL {
-            guard let data = try? Data(contentsOf: URL(string: path)!) else { return }
-            self.imageView.image = UIImage(data: data)
-            self.imageView.layer.cornerRadius = 10
-        }
-        self.cashView.layer.cornerRadius = 10
     }
 }
 
@@ -94,7 +80,7 @@ extension MainViewController: MainViewModelDelegate {
             DispatchQueue.main.async {
                 self.productsCollectionView.reloadData()
                 self.spotLightCollectionView.reloadData()
-                self.setupCashView(logo: (self.viewModel?.cashData)!)
+                self.cashViewBanner.setupView(logo: (self.viewModel?.cashData)!)
             }
         }
     }

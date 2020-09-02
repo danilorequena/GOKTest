@@ -15,13 +15,11 @@ class CashView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         commomInit()
-//        setupView()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commomInit()
-//        setupView()
     }
     
     func commomInit() {
@@ -33,20 +31,15 @@ class CashView: UIView {
     
     func setupView(logo: Cash) {
         if let logoPath = logo.bannerURL {
-            guard let data = try? Data(contentsOf: URL(string: logoPath)!) else { return }
-            self.imageCash.image = UIImage(data: data)
-            self.imageCash.layer.cornerRadius = 10
+            do {
+                let data = try Data(contentsOf: URL(string: logoPath)!)
+                self.imageCash.image = UIImage(data: data)
+                self.imageCash.layer.cornerRadius = 10
+            } catch {
+                self.imageCash.image = UIImage(named: "noImage")
+                self.imageCash.layer.cornerRadius = 10
+            }
         }
-//        layer.shadowColor = UIColor.lightGray.cgColor
-//        layer.shadowOffset = CGSize(width: 0, height: 2.0)
-//        layer.shadowRadius = 5.0
-//        layer.shadowOpacity = 1.0
-//        layer.masksToBounds = false
-//        layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: contentView.layer.cornerRadius).cgPath
-//        layer.backgroundColor = UIColor.clear.cgColor
-//        contentView.layer.masksToBounds = true
-//        layer.cornerRadius = 10
-        
     }
 
 }
