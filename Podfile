@@ -5,7 +5,9 @@ target 'GOKTest' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for GOKTest 
+  # Pods for GOKTest
+    pod 'SDWebImage', '~> 5.0'
+    pod 'Kingfisher', '~> 5.0' 
 
   target 'GOKTestTests' do
     inherit! :search_paths

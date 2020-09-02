@@ -8,7 +8,7 @@
 import Foundation
 
 protocol MainViewModelProtocol: AnyObject {
-    func fetchData()
+    func fetchDataCollections()
 }
 
 protocol MainViewModelDelegate: AnyObject {
@@ -20,10 +20,13 @@ class MainViewModel: MainViewModelProtocol {
     weak var delegate: MainViewModelDelegate?
     var listProdutcs: [Products] = []
     var listSpotlight: [Spotlight] = []
-    func fetchData() {
-        ListStorage.loadList(urlString: Constants.urlPath) { (lists) in
+    var cashData: Cash?
+
+    func fetchDataCollections() {
+        Service.loadList(urlString: Constants.urlPath) { (lists) in
             self.listProdutcs += lists.products!
             self.listSpotlight += lists.spotlight!
+            self.cashData = lists.cash
             self.delegate?.successList()
         } onError: { (error) in
             self.delegate?.errorList(error: "\(error)")

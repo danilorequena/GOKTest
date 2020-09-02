@@ -11,9 +11,9 @@
 		D4017E34335DDBA7217A856B /* Pods_GOKTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A59F01EF086D9386C71F7505 /* Pods_GOKTest.framework */; };
 		D5711F8BE1B5D9BD2684CB23 /* Pods_GOKTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 870507AF06220D9F2ED6275B /* Pods_GOKTestTests.framework */; };
 		FF3C8B0324FAF1E7007FCFCE /* ListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3C8B0224FAF1E7007FCFCE /* ListCoordinator.swift */; };
-		FF3C8B0524FAF34E007FCFCE /* ListStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3C8B0424FAF34E007FCFCE /* ListStorage.swift */; };
-		FF4D0BAB24FC651B00C50B2D /* CashCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D0BA924FC651B00C50B2D /* CashCollectionViewCell.swift */; };
-		FF4D0BAC24FC651B00C50B2D /* CashCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF4D0BAA24FC651B00C50B2D /* CashCollectionViewCell.xib */; };
+		FF3C8B0524FAF34E007FCFCE /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3C8B0424FAF34E007FCFCE /* Service.swift */; };
+		FF4D0BAB24FC651B00C50B2D /* SpotlightCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D0BA924FC651B00C50B2D /* SpotlightCollectionViewCell.swift */; };
+		FF4D0BAC24FC651B00C50B2D /* SpotlightCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF4D0BAA24FC651B00C50B2D /* SpotlightCollectionViewCell.xib */; };
 		FFC5AF7724F99EE30087DC02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5AF7624F99EE30087DC02 /* AppDelegate.swift */; };
 		FFC5AF7924F99EE30087DC02 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5AF7824F99EE30087DC02 /* SceneDelegate.swift */; };
 		FFC5AF8324F99EE30087DC02 /* GOKTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FFC5AF8124F99EE30087DC02 /* GOKTest.xcdatamodeld */; };
@@ -33,6 +33,8 @@
 		FFD8B8B824FB24B90080D500 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD8B8B724FB24B90080D500 /* MainViewModel.swift */; };
 		FFD8B8BB24FB337E0080D500 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD8B8B924FB337E0080D500 /* MainCollectionViewCell.swift */; };
 		FFD8B8BC24FB337E0080D500 /* MainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD8B8BA24FB337E0080D500 /* MainCollectionViewCell.xib */; };
+		FFED3DC324FDB71E002EE570 /* CashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFED3DC224FDB71E002EE570 /* CashView.swift */; };
+		FFED3DC524FDB79C002EE570 /* CashView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFED3DC424FDB79C002EE570 /* CashView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,9 +65,9 @@
 		E5FCB0451DAEE078505B911C /* Pods-GOKTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GOKTest.debug.xcconfig"; path = "Target Support Files/Pods-GOKTest/Pods-GOKTest.debug.xcconfig"; sourceTree = "<group>"; };
 		E7083D74532BC6F15F8F39B8 /* Pods-GOKTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GOKTestTests.release.xcconfig"; path = "Target Support Files/Pods-GOKTestTests/Pods-GOKTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		FF3C8B0224FAF1E7007FCFCE /* ListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCoordinator.swift; sourceTree = "<group>"; };
-		FF3C8B0424FAF34E007FCFCE /* ListStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListStorage.swift; sourceTree = "<group>"; };
-		FF4D0BA924FC651B00C50B2D /* CashCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashCollectionViewCell.swift; sourceTree = "<group>"; };
-		FF4D0BAA24FC651B00C50B2D /* CashCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CashCollectionViewCell.xib; sourceTree = "<group>"; };
+		FF3C8B0424FAF34E007FCFCE /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		FF4D0BA924FC651B00C50B2D /* SpotlightCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightCollectionViewCell.swift; sourceTree = "<group>"; };
+		FF4D0BAA24FC651B00C50B2D /* SpotlightCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpotlightCollectionViewCell.xib; sourceTree = "<group>"; };
 		FFC5AF7324F99EE30087DC02 /* GOKTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GOKTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFC5AF7624F99EE30087DC02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFC5AF7824F99EE30087DC02 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,8 @@
 		FFD8B8B724FB24B90080D500 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		FFD8B8B924FB337E0080D500 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		FFD8B8BA24FB337E0080D500 /* MainCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCollectionViewCell.xib; sourceTree = "<group>"; };
+		FFED3DC224FDB71E002EE570 /* CashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashView.swift; sourceTree = "<group>"; };
+		FFED3DC424FDB79C002EE570 /* CashView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CashView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,8 +208,10 @@
 			isa = PBXGroup;
 			children = (
 				FFC5AFBD24FAE8050087DC02 /* MainViewController.xib */,
-				FF4D0BA924FC651B00C50B2D /* CashCollectionViewCell.swift */,
-				FF4D0BAA24FC651B00C50B2D /* CashCollectionViewCell.xib */,
+				FFED3DC224FDB71E002EE570 /* CashView.swift */,
+				FFED3DC424FDB79C002EE570 /* CashView.xib */,
+				FF4D0BA924FC651B00C50B2D /* SpotlightCollectionViewCell.swift */,
+				FF4D0BAA24FC651B00C50B2D /* SpotlightCollectionViewCell.xib */,
 				FFD8B8B924FB337E0080D500 /* MainCollectionViewCell.swift */,
 				FFD8B8BA24FB337E0080D500 /* MainCollectionViewCell.xib */,
 				FFC5AF8624F99EE60087DC02 /* LaunchScreen.storyboard */,
@@ -243,7 +249,7 @@
 		FFC5AFAF24F99F410087DC02 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				FF3C8B0424FAF34E007FCFCE /* ListStorage.swift */,
+				FF3C8B0424FAF34E007FCFCE /* Service.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -288,6 +294,7 @@
 				FFC5AF6F24F99EE30087DC02 /* Sources */,
 				FFC5AF7024F99EE30087DC02 /* Frameworks */,
 				FFC5AF7124F99EE30087DC02 /* Resources */,
+				255A372DD5B72405DC002128 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -325,6 +332,7 @@
 				FFC5AF9524F99EE70087DC02 /* Sources */,
 				FFC5AF9624F99EE70087DC02 /* Frameworks */,
 				FFC5AF9724F99EE70087DC02 /* Resources */,
+				07E5E00CCC909B71E2E76FD9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -385,9 +393,10 @@
 			files = (
 				FFC5AF8824F99EE60087DC02 /* LaunchScreen.storyboard in Resources */,
 				FFC5AF8524F99EE60087DC02 /* Assets.xcassets in Resources */,
-				FF4D0BAC24FC651B00C50B2D /* CashCollectionViewCell.xib in Resources */,
+				FF4D0BAC24FC651B00C50B2D /* SpotlightCollectionViewCell.xib in Resources */,
 				FFC5AFBF24FAE8050087DC02 /* MainViewController.xib in Resources */,
 				FFD8B8BC24FB337E0080D500 /* MainCollectionViewCell.xib in Resources */,
+				FFED3DC524FDB79C002EE570 /* CashView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +417,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		07E5E00CCC909B71E2E76FD9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GOKTest-GOKTestUITests/Pods-GOKTest-GOKTestUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GOKTest-GOKTestUITests/Pods-GOKTest-GOKTestUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GOKTest-GOKTestUITests/Pods-GOKTest-GOKTestUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		0D388E8F63013BB3B6C6681B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -428,6 +454,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		255A372DD5B72405DC002128 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GOKTest/Pods-GOKTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GOKTest/Pods-GOKTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GOKTest/Pods-GOKTest-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8D72A95C64AC5C4255D54F27 /* [CP] Check Pods Manifest.lock */ = {
@@ -481,7 +524,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF3C8B0524FAF34E007FCFCE /* ListStorage.swift in Sources */,
+				FF3C8B0524FAF34E007FCFCE /* Service.swift in Sources */,
 				FFC5AFB324F99FA90087DC02 /* Spotlight.swift in Sources */,
 				FFC5AF8324F99EE30087DC02 /* GOKTest.xcdatamodeld in Sources */,
 				FFC5AFB724F9A09C0087DC02 /* Cash.swift in Sources */,
@@ -489,12 +532,13 @@
 				FFD8B8B824FB24B90080D500 /* MainViewModel.swift in Sources */,
 				FFC5AFB924F9A0B10087DC02 /* Products.swift in Sources */,
 				FFD8B8BB24FB337E0080D500 /* MainCollectionViewCell.swift in Sources */,
+				FFED3DC324FDB71E002EE570 /* CashView.swift in Sources */,
 				FFC5AFB524F9A0910087DC02 /* ModelBase.swift in Sources */,
 				FFC5AF7924F99EE30087DC02 /* SceneDelegate.swift in Sources */,
 				FF3C8B0324FAF1E7007FCFCE /* ListCoordinator.swift in Sources */,
 				FFC5AFBB24F9A5F60087DC02 /* Coordinator.swift in Sources */,
 				FFD8B8B624FB21EC0080D500 /* Constants.swift in Sources */,
-				FF4D0BAB24FC651B00C50B2D /* CashCollectionViewCell.swift in Sources */,
+				FF4D0BAB24FC651B00C50B2D /* SpotlightCollectionViewCell.swift in Sources */,
 				FFC5AFBE24FAE8050087DC02 /* MainViewController.swift in Sources */,
 				FFC5AFC124FAE9E50087DC02 /* ApplicationCoordinator.swift in Sources */,
 			);
@@ -668,6 +712,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SM9KCJGMUP;
 				INFOPLIST_FILE = "$(SRCROOT)/GOKTest/Root/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -688,6 +733,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SM9KCJGMUP;
 				INFOPLIST_FILE = "$(SRCROOT)/GOKTest/Root/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

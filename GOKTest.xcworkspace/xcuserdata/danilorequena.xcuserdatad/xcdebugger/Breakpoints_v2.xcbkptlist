@@ -23,16 +23,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DD6C5546-CCA4-449E-A288-BD1A531B2CAF"
+            uuid = "061247E6-9755-4246-9102-F2999B26880C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GOKTest/Controllers/MainViewController.swift"
+            filePath = "GOKTest/Views/CashView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "setupCollectionView()"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "setupView(logo:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

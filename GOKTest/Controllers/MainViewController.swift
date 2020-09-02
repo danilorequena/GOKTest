@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import EMTNeumorphicView
 
 protocol MainViewControllerDelegate: class {
     func MainViewControllerDidSelectList(_ selectedList: ModelBase)
@@ -16,9 +15,10 @@ class MainViewController: UIViewController {
     weak var delegate: MainViewControllerDelegate?
     
     @IBOutlet weak var spotLightCollectionView: UICollectionView!
-    @IBOutlet weak var cashCollectionView: UICollectionView!
     @IBOutlet weak var productsCollectionView: UICollectionView!
-
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var cashView: UIView!
+    
     var viewModel: MainViewModel?
     
     override func viewDidLoad() {
@@ -26,16 +26,28 @@ class MainViewController: UIViewController {
         viewModel = MainViewModel()
         setupCollectionView()
         viewModel?.delegate = self
-        viewModel?.fetchData()
+        viewModel?.fetchDataCollections()
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
+    
+    func setupCashView(logo: Cash) {
+        if let path = logo.bannerURL {
+            guard let data = try? Data(contentsOf: URL(string: path)!) else { return }
+            self.imageView.image = UIImage(data: data)
+            self.imageView.layer.cornerRadius = 10
+        }
+        self.cashView.layer.cornerRadius = 10
+    }
 }
+
 
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func setupCollectionView() {
         productsCollectionView.register(MainCollectionViewCell.loadNib(), forCellWithReuseIdentifier: MainCollectionViewCell.identifier())
-        spotLightCollectionView.register(CashCollectionViewCell.loadNib(), forCellWithReuseIdentifier: CashCollectionViewCell.identifier())
-        
+        spotLightCollectionView.register(SpotlightCollectionViewCell.loadNib(), forCellWithReuseIdentifier: SpotlightCollectionViewCell.identifier())
         
         productsCollectionView.delegate = self
         productsCollectionView.dataSource = self
@@ -44,16 +56,13 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         (productsCollectionView.collectionViewLayout as! UICollectionViewFlowLayout).itemSize = CGSize(width: 110, height: 110)
         (spotLightCollectionView.collectionViewLayout as! UICollectionViewFlowLayout).itemSize = CGSize(width: 300, height: 160)
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.productsCollectionView {
-            return viewModel?.listProdutcs.count ?? 1
-        } else if collectionView == self.spotLightCollectionView {
-            return viewModel?.listSpotlight.count ?? 1
+            return viewModel?.listProdutcs.count ?? 0
         } else {
-            return 1
+            return viewModel?.listSpotlight.count ?? 0
         }
     }
     
@@ -65,30 +74,27 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
             cellProducts.backgroundColor = .white
             return cellProducts
         } else {
-            let cellSpotlight = collectionView.dequeueReusableCell(withReuseIdentifier: CashCollectionViewCell.identifier(), for: indexPath) as! CashCollectionViewCell
+            let cellSpotlight = collectionView.dequeueReusableCell(withReuseIdentifier: SpotlightCollectionViewCell.identifier(), for: indexPath) as! SpotlightCollectionViewCell
             let data = viewModel?.listSpotlight[indexPath.item]
             cellSpotlight.setupCell(logo: data!)
             return cellSpotlight
         }
     }
-    
-    
 }
 
 extension MainViewController: MainViewModelDelegate {
-        
         func errorList(error message: String) {
             DispatchQueue.main.async {
                 self.productsCollectionView.reloadData()
+                self.spotLightCollectionView.reloadData()
             }
         }
-        
+    
         func successList() {
             DispatchQueue.main.async {
                 self.productsCollectionView.reloadData()
                 self.spotLightCollectionView.reloadData()
-                print("caiu aqui")
+                self.setupCashView(logo: (self.viewModel?.cashData)!)
             }
         }
-        
     }

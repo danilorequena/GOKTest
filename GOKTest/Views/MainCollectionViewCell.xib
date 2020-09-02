@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MainCollectionViewCell" customModule="GOKTest" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="gTV-IL-0wX" customClass="MainCollectionViewCell" customModule="GOKTest" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -17,10 +17,10 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m2F-r6-8dD">
-                        <rect key="frame" x="-5" y="-5" width="90" height="90"/>
+                        <rect key="frame" x="10" y="10" width="60" height="60"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="90" id="FVq-4x-4iF"/>
-                            <constraint firstAttribute="height" constant="90" id="gbi-gb-O8p"/>
+                            <constraint firstAttribute="width" constant="60" id="FVq-4x-4iF"/>
+                            <constraint firstAttribute="height" constant="60" id="gbi-gb-O8p"/>
                         </constraints>
                     </imageView>
                 </subviews>

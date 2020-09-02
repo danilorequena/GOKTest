@@ -11,17 +11,17 @@ class ListCoordinator : Coordinator  {
     private  let presenter: UINavigationController // 1
 //    private  let list: [ModelBase]   // 2
     private  var mainViewController: MainViewController?  // 3
-    private  let storage: ListStorage  // 4
+    private  let storage: Service  // 4
     let viewModel = MainViewModel()
     
-    init (presenter: UINavigationController , storage: ListStorage ) {
+    init (presenter: UINavigationController , storage: Service ) {
         self.presenter = presenter
         self.storage = storage
 //        self.list = viewModel.fetchData()   // 5
     }
     
     func start() {
-        let mainViewController = GOKTest.MainViewController (nibName: nil , bundle: nil ) // 6
+        let mainViewController = MainViewController(nibName: nil , bundle: nil ) // 6
         mainViewController.title = "Main list"
 //        mainViewController.list = list
         presenter.pushViewController (mainViewController, animated: true )   // 7

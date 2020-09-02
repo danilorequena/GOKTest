@@ -20,7 +20,7 @@ struct ListCache {
     let listArray: [ModelBase]
 }
 
-class ListStorage {
+class Service {
     private static let session = URLSession.shared
 //    private var allListFromJSON: ListCache
 //    init() {
@@ -29,7 +29,7 @@ class ListStorage {
                 onError(.url)
                 return
             }
-            let dataTask = ListStorage.session.dataTask(with: url) {(data, response, error) in
+            let dataTask = Service.session.dataTask(with: url) {(data, response, error) in
                 if error == nil {
                     guard let response = response as? HTTPURLResponse else {
                         onError(.noResponse)
@@ -41,7 +41,6 @@ class ListStorage {
                         do {
                             let decoder = JSONDecoder()
                             let list = try decoder.decode(ModelBase.self, from: data)
-//                            self.allListFromJSON = ListCache(listArray: list)
                             onComplete(list)
                         } catch let jsonErr as NSError {
                             onError(.invalidJSON)
@@ -59,11 +58,4 @@ class ListStorage {
             }
             dataTask.resume()
         }
-//    }
-    
-    
-    
-//    func allList() -> [ModelBase] {
-//        return allListFromJSON.listArray
-//    }
 }

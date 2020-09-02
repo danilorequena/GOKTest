@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CashCollectionViewCell: UICollectionViewCell {
+class SpotlightCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var cashImage: UIImageView!
     
