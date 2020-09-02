@@ -22,8 +22,7 @@ struct ListCache {
 
 class Service {
     private static let session = URLSession.shared
-//    private var allListFromJSON: ListCache
-//    init() {
+    
     class func loadList(urlString: String, onComplete: @escaping (ModelBase) -> Void, onError: @escaping (ListError) -> Void) {
             guard let url = URL(string: urlString) else {
                 onError(.url)
@@ -36,7 +35,7 @@ class Service {
                         print("No Response")
                         return
                     }
-                    if response.statusCode != 500 {
+                    if response.statusCode == 200 {
                         guard let data = data else { return }
                         do {
                             let decoder = JSONDecoder()

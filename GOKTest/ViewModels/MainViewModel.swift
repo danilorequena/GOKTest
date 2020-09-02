@@ -23,13 +23,16 @@ class MainViewModel: MainViewModelProtocol {
     var cashData: Cash?
 
     func fetchDataCollections() {
-        Service.loadList(urlString: Constants.urlPath) { (lists) in
-            self.listProdutcs += lists.products!
-            self.listSpotlight += lists.spotlight!
+        Service.loadList(urlString: Constants.urlPath, onComplete: { (lists) in
+            self.listProdutcs += lists.products ?? []
+            self.listSpotlight += lists.spotlight ?? []
             self.cashData = lists.cash
             self.delegate?.successList()
-        } onError: { (error) in
+        }) { (error) in
             self.delegate?.errorList(error: "\(error)")
         }
     }
 }
+
+
+

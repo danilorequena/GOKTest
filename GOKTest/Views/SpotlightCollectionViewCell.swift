@@ -9,7 +9,7 @@ import UIKit
 
 class SpotlightCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var cashImage: UIImageView!
+    @IBOutlet weak var spotlightImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,9 +26,14 @@ class SpotlightCollectionViewCell: UICollectionViewCell {
     
     func setupCell(logo: Spotlight) {
         if let logoPath = logo.bannerURL {
-            guard let data = try? Data(contentsOf: URL(string: logoPath)!) else { return }
-            self.cashImage.image = UIImage(data: data)
-            self.cashImage.layer.cornerRadius = 10
+            do {
+                let data = try Data(contentsOf: URL(string: logoPath)!)
+                self.spotlightImage.image = UIImage(data: data)
+                self.spotlightImage.layer.cornerRadius = 10
+            } catch {
+                self.spotlightImage.image = UIImage(named: "noImage")
+                self.spotlightImage.layer.cornerRadius = 10
+            }
         }
         layer.shadowColor = UIColor.lightGray.cgColor
         layer.shadowOffset = CGSize(width: 0, height: 2.0)
