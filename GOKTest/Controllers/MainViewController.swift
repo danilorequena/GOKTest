@@ -27,6 +27,11 @@ class MainViewController: UIViewController {
         viewModel?.delegate = self
         viewModel?.fetchDataCollections()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.showLoad()
+    }
 }
 
 
