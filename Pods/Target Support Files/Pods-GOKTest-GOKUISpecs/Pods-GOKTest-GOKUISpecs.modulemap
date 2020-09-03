@@ -1,0 +1,6 @@
+framework module Pods_GOKTest_GOKUISpecs {
+  umbrella header "Pods-GOKTest-GOKUISpecs-umbrella.h"
+
+  export *
+  module * { export * }
+}

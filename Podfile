@@ -6,15 +6,16 @@ target 'GOKTest' do
   use_frameworks!
 
   # Pods for GOKTest
-    pod 'SDWebImage', '~> 5.0'
-    pod 'Kingfisher', '~> 5.0' 
+     
 
-  target 'GOKTestTests' do
+  target 'GOKSpecs' do
     inherit! :search_paths
     # Pods for testing
+    pod 'Quick'
+    pod 'Nimble'
   end
 
-  target 'GOKTestUITests' do
+  target 'GOKUISpecs' do
     # Pods for testing
   end
 

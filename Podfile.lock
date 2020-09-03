@@ -1,24 +1,20 @@
 PODS:
-  - Kingfisher (5.14.1):
-    - Kingfisher/Core (= 5.14.1)
-  - Kingfisher/Core (5.14.1)
-  - SDWebImage (5.8.4):
-    - SDWebImage/Core (= 5.8.4)
-  - SDWebImage/Core (5.8.4)
+  - Nimble (8.1.1)
+  - Quick (3.0.0)
 
 DEPENDENCIES:
-  - Kingfisher (~> 5.0)
-  - SDWebImage (~> 5.0)
+  - Nimble
+  - Quick
 
 SPEC REPOS:
   trunk:
-    - Kingfisher
-    - SDWebImage
+    - Nimble
+    - Quick
 
 SPEC CHECKSUMS:
-  Kingfisher: 8050bc6f7f68cbf3908bd04df7ccbac188f6d6d6
-  SDWebImage: cf6922231e95550934da2ada0f20f2becf2ceba9
+  Nimble: 5f8a2fb6fa343a7242dfdd9d42f7267419d464b2
+  Quick: 6d9559f40647bc4d510103842ef2fdd882d753e2
 
-PODFILE CHECKSUM: 2c433b8b9440451d7c4a8a34224e999a22e683e4
+PODFILE CHECKSUM: c1388996e27bddd511d84156a68e09ff8a7fbb83
 
 COCOAPODS: 1.9.3
