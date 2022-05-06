@@ -9,6 +9,7 @@ import UIKit
 
 fileprivate var aView: UIView?
 
+@available(iOS 13.0, *)
 extension MainViewController {
     func showLoad() {
         aView = UIView(frame: self.view.bounds)
