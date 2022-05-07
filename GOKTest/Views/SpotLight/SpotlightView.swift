@@ -25,6 +25,11 @@ final class SpotlightView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func setup() {
+        let section = SpotlightViewSection()
+        collectionView.update(sections: [section])
+    }
 }
 
 extension SpotlightView: CodeView {

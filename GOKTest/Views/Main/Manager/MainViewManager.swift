@@ -10,7 +10,7 @@ import UIKit
 
 final class MainViewManager: NSObject {
     func register(_ tableView: UITableView) {
-//        tableView.register(<#T##T.Type#>)
+        tableView.register(SpotlightTableViewCell.self)
     }
 }
 
@@ -20,7 +20,9 @@ extension MainViewManager: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        UITableViewCell()
+        let cell: SpotlightTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
+        cell.backgroundColor = .blue
+        return cell
     }
 }
 
