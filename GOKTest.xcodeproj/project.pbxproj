@@ -13,7 +13,7 @@
 		FF1A94FD250024A300E8E680 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A94FC250024A300E8E680 /* UIView+Extension.swift */; };
 		FF1A950125006F1A00E8E680 /* MainViewController+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A950025006F1A00E8E680 /* MainViewController+Loading.swift */; };
 		FF3C8B0324FAF1E7007FCFCE /* ListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3C8B0224FAF1E7007FCFCE /* ListCoordinator.swift */; };
-		FF3C8B0524FAF34E007FCFCE /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3C8B0424FAF34E007FCFCE /* Service.swift */; };
+		FF3C8B0524FAF34E007FCFCE /* MainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3C8B0424FAF34E007FCFCE /* MainService.swift */; };
 		FF5997F82501632E00A51DC7 /* GOKSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5997F72501632E00A51DC7 /* GOKSpecs.swift */; };
 		FF5998062501634400A51DC7 /* GOKUISpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5998052501634400A51DC7 /* GOKUISpecs.swift */; };
 		FF59980E250163CC00A51DC7 /* MainViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5997EA25015FEA00A51DC7 /* MainViewControllerSpec.swift */; };
@@ -23,7 +23,7 @@
 		FFC5AF8524F99EE60087DC02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFC5AF8424F99EE60087DC02 /* Assets.xcassets */; };
 		FFC5AF8824F99EE60087DC02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFC5AF8624F99EE60087DC02 /* LaunchScreen.storyboard */; };
 		FFC5AFB324F99FA90087DC02 /* Spotlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5AFB224F99FA90087DC02 /* Spotlight.swift */; };
-		FFC5AFB524F9A0910087DC02 /* ModelBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5AFB424F9A0910087DC02 /* ModelBase.swift */; };
+		FFC5AFB524F9A0910087DC02 /* DigioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5AFB424F9A0910087DC02 /* DigioModel.swift */; };
 		FFC5AFB724F9A09C0087DC02 /* Cash.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5AFB624F9A09C0087DC02 /* Cash.swift */; };
 		FFC5AFB924F9A0B10087DC02 /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5AFB824F9A0B10087DC02 /* Products.swift */; };
 		FFC5AFBB24F9A5F60087DC02 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5AFBA24F9A5F60087DC02 /* Coordinator.swift */; };
@@ -46,6 +46,10 @@
 		FFE0840D2825B75600B43250 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE0840C2825B75600B43250 /* UICollectionView+Extension.swift */; };
 		FFE0840F2825BA0500B43250 /* SpotlightCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE0840E2825BA0500B43250 /* SpotlightCollectionViewCell.swift */; };
 		FFE084112825BB1500B43250 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE084102825BB1500B43250 /* UIImageView+Extension.swift */; };
+		FFE084132826BC0500B43250 /* ApiServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE084122826BC0500B43250 /* ApiServiceError.swift */; };
+		FFE084162826BCE800B43250 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE084152826BCE800B43250 /* Endpoint.swift */; };
+		FFE084182826BD0B00B43250 /* PrintableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE084172826BD0B00B43250 /* PrintableError.swift */; };
+		FFE0841A2826BD4D00B43250 /* MainEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE084192826BD4D00B43250 /* MainEndpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,7 +91,7 @@
 		FF1A94FC250024A300E8E680 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		FF1A950025006F1A00E8E680 /* MainViewController+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+Loading.swift"; sourceTree = "<group>"; };
 		FF3C8B0224FAF1E7007FCFCE /* ListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCoordinator.swift; sourceTree = "<group>"; };
-		FF3C8B0424FAF34E007FCFCE /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		FF3C8B0424FAF34E007FCFCE /* MainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainService.swift; sourceTree = "<group>"; };
 		FF5997EA25015FEA00A51DC7 /* MainViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerSpec.swift; sourceTree = "<group>"; };
 		FF5997F52501632E00A51DC7 /* GOKSpecs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GOKSpecs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF5997F72501632E00A51DC7 /* GOKSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOKSpecs.swift; sourceTree = "<group>"; };
@@ -105,7 +109,7 @@
 		FFC5AF9224F99EE60087DC02 /* GOKTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOKTestTests.swift; sourceTree = "<group>"; };
 		FFC5AF9424F99EE60087DC02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFC5AFB224F99FA90087DC02 /* Spotlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spotlight.swift; sourceTree = "<group>"; };
-		FFC5AFB424F9A0910087DC02 /* ModelBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelBase.swift; sourceTree = "<group>"; };
+		FFC5AFB424F9A0910087DC02 /* DigioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioModel.swift; sourceTree = "<group>"; };
 		FFC5AFB624F9A09C0087DC02 /* Cash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cash.swift; sourceTree = "<group>"; };
 		FFC5AFB824F9A0B10087DC02 /* Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
 		FFC5AFBA24F9A5F60087DC02 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -128,6 +132,10 @@
 		FFE0840C2825B75600B43250 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		FFE0840E2825BA0500B43250 /* SpotlightCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightCollectionViewCell.swift; sourceTree = "<group>"; };
 		FFE084102825BB1500B43250 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		FFE084122826BC0500B43250 /* ApiServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceError.swift; sourceTree = "<group>"; };
+		FFE084152826BCE800B43250 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		FFE084172826BD0B00B43250 /* PrintableError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintableError.swift; sourceTree = "<group>"; };
+		FFE084192826BD4D00B43250 /* MainEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainEndpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,7 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				FFC5AFB224F99FA90087DC02 /* Spotlight.swift */,
-				FFC5AFB424F9A0910087DC02 /* ModelBase.swift */,
+				FFC5AFB424F9A0910087DC02 /* DigioModel.swift */,
 				FFC5AFB624F9A09C0087DC02 /* Cash.swift */,
 				FFC5AFB824F9A0B10087DC02 /* Products.swift */,
 			);
@@ -304,7 +312,9 @@
 		FFC5AFAF24F99F410087DC02 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				FF3C8B0424FAF34E007FCFCE /* Service.swift */,
+				FFE084142826BCA600B43250 /* Endpoint */,
+				FF3C8B0424FAF34E007FCFCE /* MainService.swift */,
+				FFE084122826BC0500B43250 /* ApiServiceError.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -344,6 +354,8 @@
 			children = (
 				FFE083EF2825ACC600B43250 /* CodeView.swift */,
 				FFE083F92825B08600B43250 /* DescribeProtocol.swift */,
+				FFE084152826BCE800B43250 /* Endpoint.swift */,
+				FFE084172826BD0B00B43250 /* PrintableError.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -392,6 +404,14 @@
 				FFE0840E2825BA0500B43250 /* SpotlightCollectionViewCell.swift */,
 			);
 			path = Section;
+			sourceTree = "<group>";
+		};
+		FFE084142826BCA600B43250 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				FFE084192826BD4D00B43250 /* MainEndpoint.swift */,
+			);
+			path = Endpoint;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -631,14 +651,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFE083FF2825B37900B43250 /* SpotlightTableViewCell.swift in Sources */,
-				FF3C8B0524FAF34E007FCFCE /* Service.swift in Sources */,
+				FF3C8B0524FAF34E007FCFCE /* MainService.swift in Sources */,
 				FFC5AFB324F99FA90087DC02 /* Spotlight.swift in Sources */,
 				FFE083F82825B05D00B43250 /* UITableView+Extension.swift in Sources */,
 				FFC5AF8324F99EE30087DC02 /* GOKTest.xcdatamodeld in Sources */,
+				FFE084132826BC0500B43250 /* ApiServiceError.swift in Sources */,
 				FFE084042825B4A900B43250 /* DigioCollectionView.swift in Sources */,
 				FFE083F62825AF9A00B43250 /* MainViewManager.swift in Sources */,
 				FFE084012825B41C00B43250 /* SpotlightView.swift in Sources */,
 				FFE083FC2825B11700B43250 /* NSObject+DescribeProtocol.swift in Sources */,
+				FFE084182826BD0B00B43250 /* PrintableError.swift in Sources */,
 				FFE0840F2825BA0500B43250 /* SpotlightCollectionViewCell.swift in Sources */,
 				FFC5AFB724F9A09C0087DC02 /* Cash.swift in Sources */,
 				FFC5AF7724F99EE30087DC02 /* AppDelegate.swift in Sources */,
@@ -646,7 +668,8 @@
 				FFD8B8B824FB24B90080D500 /* MainViewModel.swift in Sources */,
 				FFC5AFB924F9A0B10087DC02 /* Products.swift in Sources */,
 				FF1A950125006F1A00E8E680 /* MainViewController+Loading.swift in Sources */,
-				FFC5AFB524F9A0910087DC02 /* ModelBase.swift in Sources */,
+				FFC5AFB524F9A0910087DC02 /* DigioModel.swift in Sources */,
+				FFE0841A2826BD4D00B43250 /* MainEndpoint.swift in Sources */,
 				FFE083F02825ACC600B43250 /* CodeView.swift in Sources */,
 				FFC5AF7924F99EE30087DC02 /* SceneDelegate.swift in Sources */,
 				FF3C8B0324FAF1E7007FCFCE /* ListCoordinator.swift in Sources */,
@@ -660,6 +683,7 @@
 				FFE083F22825AD0C00B43250 /* UIView+Constraints.swift in Sources */,
 				FFC5AFBE24FAE8050087DC02 /* MainViewController.swift in Sources */,
 				FFE084062825B52E00B43250 /* DigioCollectionViewDataSource.swift in Sources */,
+				FFE084162826BCE800B43250 /* Endpoint.swift in Sources */,
 				FFC5AFC124FAE9E50087DC02 /* ApplicationCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,12 +7,27 @@
 
 import UIKit
 
+protocol MainViewControllerProtocol: AnyObject {
+    func showBanners()
+}
+
 final class MainViewController: UIViewController {
+    private let viewModel: MainViewModelProtocol
     private let mainView = MainView()
+    
+    init(viewModel: MainViewModelProtocol) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        viewModel.fetchData()
     }
 }
 
@@ -24,6 +39,10 @@ extension MainViewController: CodeView {
     func setupConstraints() {
         mainView.bindFrameToSuperviewBounds()
     }
-    
-    
+}
+
+extension MainViewController: MainViewControllerProtocol {
+    func showBanners() {
+        print("Mostrou os banners")
+    }
 }

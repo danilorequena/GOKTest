@@ -8,7 +8,7 @@
 import Foundation
 
 protocol MainViewModelProtocol: AnyObject {
-    func fetchDataCollections()
+    func fetchData()
 }
 
 protocol MainViewModelDelegate: AnyObject {
@@ -16,20 +16,26 @@ protocol MainViewModelDelegate: AnyObject {
     func errorList(error: String)
 }
 
-class MainViewModel: MainViewModelProtocol {
-    weak var delegate: MainViewModelDelegate?
-    var listProdutcs: [Products] = []
-    var listSpotlight: [Spotlight] = []
-    var cashData: Cash?
+final class MainViewModel: MainViewModelProtocol {
+    weak var view: MainViewControllerProtocol?
+    
+    private let service: MainServiceProtocol
+    
+    init(service: MainServiceProtocol = MainService()) {
+        self.service = service
+    }
+    
 
-    func fetchDataCollections() {
-        Service.loadList(urlString: Constants.urlPath, onComplete: { (lists) in
-            self.listProdutcs += lists.products ?? []
-            self.listSpotlight += lists.spotlight ?? []
-            self.cashData = lists.cash
-            self.delegate?.successList()
-        }) { (error) in
-            self.delegate?.errorList(error: "\(error)")
+    func fetchData() {
+        service.fetchDiscoverMovies { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case let .success(data):
+                self.view?.showBanners()
+                print("deu certo")
+            case let .failure(error):
+                print("deu errado")
+            }
         }
     }
 }

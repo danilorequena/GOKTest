@@ -9,34 +9,23 @@ import UIKit
 
 @available(iOS 13.0, *)
 class ListCoordinator : Coordinator  {
-    private  let presenter: UINavigationController // 1
-//    private  let list: [ModelBase]   // 2
-    private  var mainViewController: MainViewController?  // 3
-    private  let storage: Service  // 4
+    private  let presenter: UINavigationController
+    private  var mainViewController: MainViewController?
     let viewModel = MainViewModel()
     
-    init (presenter: UINavigationController , storage: Service ) {
+    init (presenter: UINavigationController) {
         self.presenter = presenter
-        self.storage = storage
-//        self.list = viewModel.fetchData()   // 5
     }
     
     func start() {
-        let mainViewController = MainViewController(nibName: nil , bundle: nil ) // 6
+        let viewModel = MainViewModel()
+        let mainViewController = MainViewController(viewModel: viewModel)
+        
+        viewModel.view = mainViewController
         mainViewController.title = "Main list"
-//        mainViewController.list = list
-        presenter.pushViewController (mainViewController, animated: true )   // 7
+        presenter.pushViewController(mainViewController, animated: true)
         
         self.mainViewController = mainViewController
     }
 }
-
-//extension ListCoordinator: KanjiListViewControllerDelegate {
-//  func MainViewControllerDidSelectList(_ selectedList: Kanji) {
-//    let listDetailCoordinator = KanjiDetailCoordinator(presenter: presenter, kanji: selectedKanji, kanjiStorage: kanjiStorage)
-//    kanjiDetailCoordinator.start()
-//
-////    self.kanjiDetailCoordinator = kanjiDetailCoordinator
-//  }
-//}
 
