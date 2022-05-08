@@ -115,5 +115,24 @@ extension UILabel {
         let coloredNSRange = NSRange(coloredRange, in: text)
         applyColor(at: coloredNSRange, color: color)
     }
+    
+    public func applyBoldFont(at string: String) {
+        guard
+            let text = text,
+            let boldRange = text.range(of: string)
+        else { return }
+
+        let boldNSRange = NSRange(boldRange, in: text)
+        applyBoldFont(at: boldNSRange)
+    }
+    
+    public func applyBoldFont(at range: NSRange) {
+        guard let string = text else { return }
+        let boldFont: UIFont = .boldSystemFont(ofSize: 22)
+        let boldAttribute = [NSAttributedString.Key.font: boldFont]
+        let attrStr = NSMutableAttributedString(string: string, attributes: [:])
+        attrStr.setAttributes(boldAttribute, range: range)
+        attributedText = attrStr
+    }
 }
 

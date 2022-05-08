@@ -60,7 +60,8 @@ extension ProductsView: CodeView {
             leading: leadingAnchor,
             bottom: bottomAnchor,
             trailing: trailingAnchor,
-            insets: .init(top: 16, left: 16, bottom: 0, right: 16)
+            insets: .init(top: 16, left: 0, bottom: 0, right: 0)
         )
+        collectonView.anchor(height: 110)
     }
 }

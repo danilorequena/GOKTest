@@ -70,8 +70,6 @@ extension MainView: CodeView {
             insets: .init(top: 22, left: 16, bottom: 0, right: 16)
         )
         
-        cashView.anchor(height: 140)
-        
         productView.anchor(
             top: cashView.bottomAnchor,
             leading: leadingAnchor,
@@ -79,7 +77,7 @@ extension MainView: CodeView {
             insets: .init(top: 16, left: 8, bottom: 0, right: 8)
         )
         
-        productView.anchor(height: 200)
+//        productView.anchor(height: 140)
     }
     
     func setupAdditionalConfiguration() {

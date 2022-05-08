@@ -24,7 +24,7 @@ final class ProductsCollectionViewCell: UICollectionViewCell {
     }
     
     func setupCell(with product: Product) {
-        productImage.download(from: product.imageURL, placeHolder: UIImage(named: ""))
+        productImage.download(from: product.imageURL, placeHolder: UIImage(named: "noImage"))
     }
 }
 

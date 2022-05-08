@@ -12,7 +12,7 @@ final class CashView: UIView {
        let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.distribution = .fillProportionally
-        stackView.spacing = 16
+        stackView.spacing = 2
         return stackView
     }()
     
@@ -38,7 +38,8 @@ final class CashView: UIView {
     
     func setup(banner: Cash) {
         title.text = banner.title
-        cashView.download(from: banner.bannerURL, placeHolder: UIImage(named: ""))
+        title.applyColor(at: "Cash", color: UIColor.lightGray)
+        cashView.download(from: banner.bannerURL, placeHolder: UIImage(named: "noImage"))
     }
 }
 
@@ -50,5 +51,18 @@ extension CashView: CodeView {
     
     func setupConstraints() {
         stackView.bindFrameToSuperviewBounds()
+        title.anchor(height: 22)
+        cashView.anchor(height: 110)
+    }
+    
+    func setupAdditionalConfiguration() {
+        cashView.clipsToBounds = true
+        cashView.layer.cornerRadius = 16
+        cashView.dropShadow(
+            offset: CGSize(width: 2, height: 3),
+            radius: 4,
+            opacity: 0.2,
+            color: UIColor.lightGray.cgColor
+        )
     }
 }
