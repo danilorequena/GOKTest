@@ -18,6 +18,8 @@ final class MainView: UIView {
     )
     
     private let spotlightView = SpotlightView()
+    private let cashView = CashView()
+    private let productView = ProductsView()
     
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
@@ -29,13 +31,20 @@ final class MainView: UIView {
     }
     
     func updateView(data: DigioModel) {
-        spotlightView.setup(spotlights: data.spotlight)
+        spotlightView.updateView(spotlights: data.spotlight)
+        cashView.setup(banner: data.cash.bannerURL)
+        productView.updateView(with: data.products)
     }
 }
 
 extension MainView: CodeView {
     func buildViewHierarchy() {
-        addSubviews(title, spotlightView)
+        addSubviews(
+            title,
+            spotlightView,
+            cashView,
+            productView
+        )
     }
     
     func setupConstraints() {
@@ -52,8 +61,25 @@ extension MainView: CodeView {
             trailing: trailingAnchor,
             insets: .init(top: 16, left: 0, bottom: 0, right: 0)
         )
-        
         spotlightView.anchor(height: 200)
+        
+        cashView.anchor(
+            top: spotlightView.bottomAnchor,
+            leading: leadingAnchor,
+            trailing: trailingAnchor,
+            insets: .init(top: 22, left: 16, bottom: 0, right: 16)
+        )
+        
+        cashView.anchor(height: 140)
+        
+        productView.anchor(
+            top: cashView.bottomAnchor,
+            leading: leadingAnchor,
+            trailing: trailingAnchor,
+            insets: .init(top: 16, left: 8, bottom: 0, right: 8)
+        )
+        
+        productView.anchor(height: 180)
     }
     
     func setupAdditionalConfiguration() {

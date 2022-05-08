@@ -29,7 +29,7 @@ final class SpotlightView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setup(spotlights: [Spotlight]) {
+    func updateView(spotlights: [Spotlight]) {
         let section = SpotlightViewSection(spotlights: spotlights)
         collectionView.update(sections: [section])
     }
