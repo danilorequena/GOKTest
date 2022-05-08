@@ -23,6 +23,7 @@ final class ProductsView: UIView {
             minimumCellSpacing: 8
         )
         collectionView.scrollDirection = .horizontal
+        collectionView.showsHorizontalScrollIndicator = false
         return collectionView
     }()
     

@@ -12,11 +12,10 @@ final class SpotlightView: UIView {
         let collection = DigioCollectionView(
             sections: [],
             contentInset: .init(top: 0, left: 8, bottom: 0, right: 8),
-            minimumCellSpacing: 8
+            minimumCellSpacing: 16
         )
         collection.scrollDirection = .horizontal
         collection.showsHorizontalScrollIndicator = false
-        collection.clipsToBounds = true
         return collection
     }()
     

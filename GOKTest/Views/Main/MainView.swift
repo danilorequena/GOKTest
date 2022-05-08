@@ -76,8 +76,6 @@ extension MainView: CodeView {
             trailing: trailingAnchor,
             insets: .init(top: 16, left: 8, bottom: 0, right: 8)
         )
-        
-//        productView.anchor(height: 140)
     }
     
     func setupAdditionalConfiguration() {

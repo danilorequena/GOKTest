@@ -31,7 +31,7 @@ final class SpotlightViewSection: Section {
     }
     
     func cellSize(with collectionViewBounds: CGRect, at indexPath: IndexPath) -> CGSize {
-        .init(width: collectionViewBounds.width - 16, height: collectionViewBounds.height * 3)
+        .init(width: collectionViewBounds.width - 32, height: 180)
     }
     
     func sectionInsets(in section: Int) -> UIEdgeInsets {
