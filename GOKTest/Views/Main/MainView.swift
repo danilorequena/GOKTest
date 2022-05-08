@@ -32,7 +32,7 @@ final class MainView: UIView {
     
     func updateView(data: DigioModel) {
         spotlightView.updateView(spotlights: data.spotlight)
-        cashView.setup(banner: data.cash.bannerURL)
+        cashView.setup(banner: data.cash)
         productView.updateView(with: data.products)
     }
 }
@@ -79,7 +79,7 @@ extension MainView: CodeView {
             insets: .init(top: 16, left: 8, bottom: 0, right: 8)
         )
         
-        productView.anchor(height: 180)
+        productView.anchor(height: 200)
     }
     
     func setupAdditionalConfiguration() {

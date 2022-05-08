@@ -8,6 +8,7 @@
 import UIKit
 
 final class ProductsCollectionViewCell: UICollectionViewCell {
+    private let view = UIView()
     private let productImage = UIImageView.Factory.build(
         contentMode: .scaleAspectFit,
         accessibilityIdentifier: "productImage"
@@ -29,10 +30,26 @@ final class ProductsCollectionViewCell: UICollectionViewCell {
 
 extension ProductsCollectionViewCell: CodeView {
     func buildViewHierarchy() {
-        addSubview(productImage)
+        contentView.addSubview(view)
+        view.addSubview(productImage)
     }
     
     func setupConstraints() {
-        productImage.bindFrameToSuperviewBounds()
+        view.bindFrameToSuperviewBounds()
+        productImage.anchorCenterTo(view: view)
+        productImage.anchor(height: 80, width: 80)
+    }
+    
+    func setupAdditionalConfiguration() {
+        view.backgroundColor = .white
+        view.layer.cornerRadius = 8
+        productImage.clipsToBounds = true
+        productImage.layer.cornerRadius = 8
+        contentView.dropShadow(
+            offset: CGSize(width: 2, height: 3),
+            radius: 4,
+            opacity: 0.2,
+            color: UIColor.lightGray.cgColor
+        )
     }
 }

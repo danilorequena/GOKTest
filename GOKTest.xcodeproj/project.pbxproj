@@ -36,6 +36,8 @@
 		FFCB78F0282837D20004F33E /* ProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCB78EF282837D20004F33E /* ProductsView.swift */; };
 		FFCB78F228283F460004F33E /* ProductsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCB78F128283F460004F33E /* ProductsSection.swift */; };
 		FFCB78F9282840900004F33E /* ProductsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCB78F8282840900004F33E /* ProductsCollectionViewCell.swift */; };
+		FFCB78FC282848F40004F33E /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCB78FB282848F40004F33E /* UIStackView+Extension.swift */; };
+		FFCB78FE28285C5C0004F33E /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCB78FD28285C5C0004F33E /* UIView+Shadow.swift */; };
 		FFD8B8B624FB21EC0080D500 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD8B8B524FB21EC0080D500 /* Constants.swift */; };
 		FFD8B8B824FB24B90080D500 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD8B8B724FB24B90080D500 /* MainViewModel.swift */; };
 		FFE083E52825AC2300B43250 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE083E42825AC2300B43250 /* MainView.swift */; };
@@ -128,6 +130,8 @@
 		FFCB78EF282837D20004F33E /* ProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsView.swift; sourceTree = "<group>"; };
 		FFCB78F128283F460004F33E /* ProductsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsSection.swift; sourceTree = "<group>"; };
 		FFCB78F8282840900004F33E /* ProductsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCollectionViewCell.swift; sourceTree = "<group>"; };
+		FFCB78FB282848F40004F33E /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
+		FFCB78FD28285C5C0004F33E /* UIView+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
 		FFD8B8B524FB21EC0080D500 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FFD8B8B724FB24B90080D500 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		FFE083E42825AC2300B43250 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -222,6 +226,8 @@
 				FFCB78E728278CE90004F33E /* UIImageView+KingFisher.swift */,
 				FFCB78E9282799670004F33E /* UILabel+Extension.swift */,
 				FFCB78EB282799B80004F33E /* UIImage+Extension.swift */,
+				FFCB78FB282848F40004F33E /* UIStackView+Extension.swift */,
+				FFCB78FD28285C5C0004F33E /* UIView+Shadow.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -739,6 +745,7 @@
 				FFE083F62825AF9A00B43250 /* MainViewManager.swift in Sources */,
 				FFE084012825B41C00B43250 /* SpotlightView.swift in Sources */,
 				FFCB78EA282799670004F33E /* UILabel+Extension.swift in Sources */,
+				FFCB78FE28285C5C0004F33E /* UIView+Shadow.swift in Sources */,
 				FFE083FC2825B11700B43250 /* NSObject+DescribeProtocol.swift in Sources */,
 				FFE084182826BD0B00B43250 /* PrintableError.swift in Sources */,
 				FFE0840F2825BA0500B43250 /* SpotlightCollectionViewCell.swift in Sources */,
@@ -757,6 +764,7 @@
 				FFE0840D2825B75600B43250 /* UICollectionView+Extension.swift in Sources */,
 				FFE083FA2825B08600B43250 /* DescribeProtocol.swift in Sources */,
 				FFE083E52825AC2300B43250 /* MainView.swift in Sources */,
+				FFCB78FC282848F40004F33E /* UIStackView+Extension.swift in Sources */,
 				FFE084112825BB1500B43250 /* UIImageView+Extension.swift in Sources */,
 				FF1A94FD250024A300E8E680 /* UIView+Extension.swift in Sources */,
 				FFCB78E828278CE90004F33E /* UIImageView+KingFisher.swift in Sources */,

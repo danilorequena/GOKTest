@@ -8,6 +8,20 @@
 import UIKit
 
 final class CashView: UIView {
+    private let stackView: UIStackView = {
+       let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.distribution = .fillProportionally
+        stackView.spacing = 16
+        return stackView
+    }()
+    
+    private let title = UILabel.Factory.build(
+        textStyle: .headline,
+        accessibilityIdentifier: "title",
+        textColor: .black
+    )
+    
     private var cashView = UIImageView.Factory.build(
         contentMode: .scaleAspectFit,
         accessibilityIdentifier: "cashView"
@@ -22,17 +36,19 @@ final class CashView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setup(banner: String) {
-        cashView.download(from: banner, placeHolder: UIImage(named: ""))
+    func setup(banner: Cash) {
+        title.text = banner.title
+        cashView.download(from: banner.bannerURL, placeHolder: UIImage(named: ""))
     }
 }
 
 extension CashView: CodeView {
     func buildViewHierarchy() {
-        addSubview(cashView)
+        addSubview(stackView)
+        stackView.addArrangedSubviews(title, cashView)
     }
     
     func setupConstraints() {
-        cashView.bindFrameToSuperviewBounds()
+        stackView.bindFrameToSuperviewBounds()
     }
 }

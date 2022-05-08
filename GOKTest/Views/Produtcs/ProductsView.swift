@@ -8,6 +8,14 @@
 import UIKit
 
 final class ProductsView: UIView {
+    private let title = UILabel.Factory.build(
+        text: "Produtos",
+        textAlignment: .left,
+        textStyle: .headline,
+        accessibilityIdentifier: "title",
+        textColor: .black
+    )
+    
     private let collectonView: DigioCollectionView = {
         let collectionView = DigioCollectionView(
             sections: [],
@@ -36,10 +44,23 @@ final class ProductsView: UIView {
 
 extension ProductsView: CodeView {
     func buildViewHierarchy() {
-        addSubview(collectonView)
+        addSubviews(title, collectonView)
     }
     
     func setupConstraints() {
-        collectonView.bindFrameToSuperviewBounds()
+        title.anchor(
+            top: topAnchor,
+            leading: leadingAnchor,
+            trailing: trailingAnchor,
+            insets: .init(top: 0, left: 16, bottom: 0, right: 16)
+        )
+        
+        collectonView.anchor(
+            top: title.bottomAnchor,
+            leading: leadingAnchor,
+            bottom: bottomAnchor,
+            trailing: trailingAnchor,
+            insets: .init(top: 16, left: 16, bottom: 0, right: 16)
+        )
     }
 }
