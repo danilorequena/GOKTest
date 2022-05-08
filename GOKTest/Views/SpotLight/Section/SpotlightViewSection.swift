@@ -41,6 +41,10 @@ final class SpotlightViewSection: Section {
     func headerSize(width: CGFloat, in section: Int) -> CGSize {
         .zero
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //TODO: - começar a Criar a navegação aqui
+    }
 }
 
 
