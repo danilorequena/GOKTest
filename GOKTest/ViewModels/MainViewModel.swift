@@ -31,7 +31,7 @@ final class MainViewModel: MainViewModelProtocol {
             guard let self = self else { return }
             switch result {
             case let .success(data):
-                self.view?.showBanners()
+                self.view?.showBanners(data: data)
                 print("deu certo")
             case let .failure(error):
                 print("deu errado")

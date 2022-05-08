@@ -8,23 +8,16 @@
 import UIKit
 
 final class MainView: UIView {
-    private let tableView: UITableView = {
-        let tableView = UITableView()
-//        tableView.register(SpotlightTableViewCell.self)
-        tableView.separatorStyle = .none
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 88
-        return tableView
-    }()
+    private let title = UILabel.Factory.build(
+        text: "Olá Danilo",
+        textAlignment: .left,
+        textStyle: .headline,
+        numberOfLines: 1,
+        accessibilityIdentifier: "title",
+        textColor: .black
+    )
     
-    private lazy var tableViewManager: MainViewManager = {
-        let tableViewManager = MainViewManager()
-        tableView.delegate = tableViewManager
-        tableView.dataSource = tableViewManager
-//        tableViewManager.delegate = self
-        tableViewManager.register(tableView)
-        return tableViewManager
-    }()
+    private let spotlightView = SpotlightView()
     
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
@@ -35,25 +28,32 @@ final class MainView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func updateView() {
-        tableView.delegate = tableViewManager
-        tableView.dataSource = tableViewManager
-        tableView.reloadData()
+    func updateView(data: DigioModel) {
+        spotlightView.setup(spotlights: data.spotlight)
     }
 }
 
 extension MainView: CodeView {
     func buildViewHierarchy() {
-        addSubview(tableView)
+        addSubviews(title, spotlightView)
     }
     
     func setupConstraints() {
-        tableView.anchor(
+        title.anchor(
             top: safeAreaLayoutGuide.topAnchor,
             leading: leadingAnchor,
-            bottom: bottomAnchor,
-            trailing: trailingAnchor
+            trailing: trailingAnchor,
+            insets: .init(top: 8, left: 16, bottom: 0, right: 0)
         )
+        
+        spotlightView.anchor(
+            top: title.bottomAnchor,
+            leading: leadingAnchor,
+            trailing: trailingAnchor,
+            insets: .init(top: 16, left: 0, bottom: 0, right: 0)
+        )
+        
+        spotlightView.anchor(height: 200)
     }
     
     func setupAdditionalConfiguration() {

@@ -29,13 +29,15 @@
 		FFC5AFBB24F9A5F60087DC02 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5AFBA24F9A5F60087DC02 /* Coordinator.swift */; };
 		FFC5AFBE24FAE8050087DC02 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5AFBC24FAE8050087DC02 /* MainViewController.swift */; };
 		FFC5AFC124FAE9E50087DC02 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5AFC024FAE9E50087DC02 /* ApplicationCoordinator.swift */; };
+		FFCB78E828278CE90004F33E /* UIImageView+KingFisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCB78E728278CE90004F33E /* UIImageView+KingFisher.swift */; };
+		FFCB78EA282799670004F33E /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCB78E9282799670004F33E /* UILabel+Extension.swift */; };
+		FFCB78EC282799B80004F33E /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCB78EB282799B80004F33E /* UIImage+Extension.swift */; };
 		FFD8B8B624FB21EC0080D500 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD8B8B524FB21EC0080D500 /* Constants.swift */; };
 		FFD8B8B824FB24B90080D500 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD8B8B724FB24B90080D500 /* MainViewModel.swift */; };
 		FFE083E52825AC2300B43250 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE083E42825AC2300B43250 /* MainView.swift */; };
 		FFE083F02825ACC600B43250 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE083EF2825ACC600B43250 /* CodeView.swift */; };
 		FFE083F22825AD0C00B43250 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE083F12825AD0C00B43250 /* UIView+Constraints.swift */; };
 		FFE083F62825AF9A00B43250 /* MainViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE083F52825AF9A00B43250 /* MainViewManager.swift */; };
-		FFE083F82825B05D00B43250 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE083F72825B05D00B43250 /* UITableView+Extension.swift */; };
 		FFE083FA2825B08600B43250 /* DescribeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE083F92825B08600B43250 /* DescribeProtocol.swift */; };
 		FFE083FC2825B11700B43250 /* NSObject+DescribeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE083FB2825B11700B43250 /* NSObject+DescribeProtocol.swift */; };
 		FFE083FF2825B37900B43250 /* SpotlightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE083FE2825B37900B43250 /* SpotlightTableViewCell.swift */; };
@@ -115,13 +117,15 @@
 		FFC5AFBA24F9A5F60087DC02 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		FFC5AFBC24FAE8050087DC02 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FFC5AFC024FAE9E50087DC02 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		FFCB78E728278CE90004F33E /* UIImageView+KingFisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+KingFisher.swift"; sourceTree = "<group>"; };
+		FFCB78E9282799670004F33E /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		FFCB78EB282799B80004F33E /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		FFD8B8B524FB21EC0080D500 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FFD8B8B724FB24B90080D500 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		FFE083E42825AC2300B43250 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		FFE083EF2825ACC600B43250 /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
 		FFE083F12825AD0C00B43250 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		FFE083F52825AF9A00B43250 /* MainViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewManager.swift; sourceTree = "<group>"; };
-		FFE083F72825B05D00B43250 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		FFE083F92825B08600B43250 /* DescribeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescribeProtocol.swift; sourceTree = "<group>"; };
 		FFE083FB2825B11700B43250 /* NSObject+DescribeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+DescribeProtocol.swift"; sourceTree = "<group>"; };
 		FFE083FE2825B37900B43250 /* SpotlightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightTableViewCell.swift; sourceTree = "<group>"; };
@@ -204,10 +208,12 @@
 				FF1A94FC250024A300E8E680 /* UIView+Extension.swift */,
 				FF1A950025006F1A00E8E680 /* MainViewController+Loading.swift */,
 				FFE083F12825AD0C00B43250 /* UIView+Constraints.swift */,
-				FFE083F72825B05D00B43250 /* UITableView+Extension.swift */,
 				FFE083FB2825B11700B43250 /* NSObject+DescribeProtocol.swift */,
 				FFE0840C2825B75600B43250 /* UICollectionView+Extension.swift */,
 				FFE084102825BB1500B43250 /* UIImageView+Extension.swift */,
+				FFCB78E728278CE90004F33E /* UIImageView+KingFisher.swift */,
+				FFCB78E9282799670004F33E /* UILabel+Extension.swift */,
+				FFCB78EB282799B80004F33E /* UIImage+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -445,6 +451,7 @@
 				FF5997FF2501634400A51DC7 /* Sources */,
 				FF5998002501634400A51DC7 /* Frameworks */,
 				FF5998012501634400A51DC7 /* Resources */,
+				8E0E95AA7D2A8E9F27EB4A25 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -464,6 +471,7 @@
 				FFC5AF6F24F99EE30087DC02 /* Sources */,
 				FFC5AF7024F99EE30087DC02 /* Frameworks */,
 				FFC5AF7124F99EE30087DC02 /* Resources */,
+				746B8272EF4F4987F91AEF51 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -565,6 +573,40 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		746B8272EF4F4987F91AEF51 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GOKTest/Pods-GOKTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GOKTest/Pods-GOKTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GOKTest/Pods-GOKTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E0E95AA7D2A8E9F27EB4A25 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GOKTest-GOKUISpecs/Pods-GOKTest-GOKUISpecs-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GOKTest-GOKUISpecs/Pods-GOKTest-GOKUISpecs-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GOKTest-GOKUISpecs/Pods-GOKTest-GOKUISpecs-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8FBAE70CB44B8FF9C48DA5B8 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -653,12 +695,12 @@
 				FFE083FF2825B37900B43250 /* SpotlightTableViewCell.swift in Sources */,
 				FF3C8B0524FAF34E007FCFCE /* MainService.swift in Sources */,
 				FFC5AFB324F99FA90087DC02 /* Spotlight.swift in Sources */,
-				FFE083F82825B05D00B43250 /* UITableView+Extension.swift in Sources */,
 				FFC5AF8324F99EE30087DC02 /* GOKTest.xcdatamodeld in Sources */,
 				FFE084132826BC0500B43250 /* ApiServiceError.swift in Sources */,
 				FFE084042825B4A900B43250 /* DigioCollectionView.swift in Sources */,
 				FFE083F62825AF9A00B43250 /* MainViewManager.swift in Sources */,
 				FFE084012825B41C00B43250 /* SpotlightView.swift in Sources */,
+				FFCB78EA282799670004F33E /* UILabel+Extension.swift in Sources */,
 				FFE083FC2825B11700B43250 /* NSObject+DescribeProtocol.swift in Sources */,
 				FFE084182826BD0B00B43250 /* PrintableError.swift in Sources */,
 				FFE0840F2825BA0500B43250 /* SpotlightCollectionViewCell.swift in Sources */,
@@ -678,8 +720,10 @@
 				FFE083E52825AC2300B43250 /* MainView.swift in Sources */,
 				FFE084112825BB1500B43250 /* UIImageView+Extension.swift in Sources */,
 				FF1A94FD250024A300E8E680 /* UIView+Extension.swift in Sources */,
+				FFCB78E828278CE90004F33E /* UIImageView+KingFisher.swift in Sources */,
 				FFC5AFBB24F9A5F60087DC02 /* Coordinator.swift in Sources */,
 				FFD8B8B624FB21EC0080D500 /* Constants.swift in Sources */,
+				FFCB78EC282799B80004F33E /* UIImage+Extension.swift in Sources */,
 				FFE083F22825AD0C00B43250 /* UIView+Constraints.swift in Sources */,
 				FFC5AFBE24FAE8050087DC02 /* MainViewController.swift in Sources */,
 				FFE084062825B52E00B43250 /* DigioCollectionViewDataSource.swift in Sources */,

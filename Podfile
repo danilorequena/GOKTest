@@ -6,6 +6,7 @@ target 'GOKTest' do
   use_frameworks!
 
   # Pods for GOKTest
+    pod 'Kingfisher', '~> 7.0'
      
 
   target 'GOKSpecs' do

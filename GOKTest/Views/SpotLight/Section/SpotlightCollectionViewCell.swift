@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import Kingfisher
 
 final class SpotlightCollectionViewCell: UICollectionViewCell {
-    private let image = UIImageView.Factory.build(
+    private let imageView = UIImageView.Factory.build(
         contentMode: .scaleAspectFit,
         accessibilityIdentifier: "image"
     )
@@ -24,16 +25,16 @@ final class SpotlightCollectionViewCell: UICollectionViewCell {
     }
     
     func setupCell(url: String) {
-        
+        imageView.download(from: url, placeHolder: UIImage(named: ""))
     }
 }
 
 extension SpotlightCollectionViewCell: CodeView {
     func buildViewHierarchy() {
-        addSubview(image)
+        addSubview(imageView)
     }
     
     func setupConstraints() {
-        image.bindFrameToSuperviewBounds()
+        imageView.bindFrameToSuperviewBounds()
     }
 }

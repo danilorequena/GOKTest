@@ -8,15 +8,12 @@
 import UIKit
 
 protocol MainViewControllerProtocol: AnyObject {
-    func showBanners()
+    func showBanners(data: DigioModel)
 }
 
 final class MainViewController: UIViewController {
     private let viewModel: MainViewModelProtocol
-    private lazy var mainView: MainView = {
-       let view = MainView()
-        return view
-    }()
+    private let mainView = MainView()
     
     init(viewModel: MainViewModelProtocol) {
         self.viewModel = viewModel
@@ -31,6 +28,7 @@ final class MainViewController: UIViewController {
         super.viewDidLoad()
         setupView()
         viewModel.fetchData()
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
 }
 
@@ -45,7 +43,7 @@ extension MainViewController: CodeView {
 }
 
 extension MainViewController: MainViewControllerProtocol {
-    func showBanners() {
-        mainView.updateView()
+    func showBanners(data: DigioModel) {
+        mainView.updateView(data: data)
     }
 }

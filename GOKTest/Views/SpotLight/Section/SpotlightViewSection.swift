@@ -9,9 +9,14 @@ import UIKit
 
 final class SpotlightViewSection: Section {
     
+    private let spotlights: [Spotlight]
+    
+    init(spotlights: [Spotlight]) {
+        self.spotlights = spotlights
+    }
     
     func numberOfItemsInSection() -> Int {
-        1
+        spotlights.count
     }
     
     func register(_ collectionView: UICollectionView) {
@@ -20,11 +25,13 @@ final class SpotlightViewSection: Section {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: SpotlightCollectionViewCell = collectionView.dequeueReusableCell(forIndexPath: indexPath)
+        let banners = spotlights[indexPath.item]
+        cell.setupCell(url: banners.bannerURL)
         return cell
     }
     
     func cellSize(with collectionViewBounds: CGRect, at indexPath: IndexPath) -> CGSize {
-        .init(width: 100, height: 100)
+        .init(width: collectionViewBounds.width - 16, height: collectionViewBounds.height * 3)
     }
     
     func sectionInsets(in section: Int) -> UIEdgeInsets {

@@ -14,6 +14,9 @@ final class SpotlightView: UIView {
             contentInset: .init(top: 0, left: 8, bottom: 0, right: 8),
             minimumCellSpacing: 8
         )
+        collection.scrollDirection = .horizontal
+        collection.showsHorizontalScrollIndicator = false
+        collection.clipsToBounds = true
         return collection
     }()
     
@@ -26,8 +29,8 @@ final class SpotlightView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setup() {
-        let section = SpotlightViewSection()
+    func setup(spotlights: [Spotlight]) {
+        let section = SpotlightViewSection(spotlights: spotlights)
         collectionView.update(sections: [section])
     }
 }
