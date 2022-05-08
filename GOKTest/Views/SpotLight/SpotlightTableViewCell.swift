@@ -20,6 +20,10 @@ final class SpotlightTableViewCell: UITableViewCell {
     required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func setupCell() {
+        spotlightView.setup()
+    }
 
 }
 

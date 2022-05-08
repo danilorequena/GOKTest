@@ -10,6 +10,7 @@ import UIKit
 final class MainView: UIView {
     private let tableView: UITableView = {
         let tableView = UITableView()
+//        tableView.register(SpotlightTableViewCell.self)
         tableView.separatorStyle = .none
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 88
@@ -25,7 +26,7 @@ final class MainView: UIView {
         return tableViewManager
     }()
     
-    override init(frame: CGRect) {
+    override init(frame: CGRect = .zero) {
         super.init(frame: frame)
         setupView()
     }
@@ -35,7 +36,8 @@ final class MainView: UIView {
     }
     
     func updateView() {
-
+        tableView.delegate = tableViewManager
+        tableView.dataSource = tableViewManager
         tableView.reloadData()
     }
 }
@@ -46,6 +48,15 @@ extension MainView: CodeView {
     }
     
     func setupConstraints() {
-        tableView.bindFrameToSuperviewBounds()
+        tableView.anchor(
+            top: safeAreaLayoutGuide.topAnchor,
+            leading: leadingAnchor,
+            bottom: bottomAnchor,
+            trailing: trailingAnchor
+        )
+    }
+    
+    func setupAdditionalConfiguration() {
+        backgroundColor = .white
     }
 }

@@ -13,7 +13,10 @@ protocol MainViewControllerProtocol: AnyObject {
 
 final class MainViewController: UIViewController {
     private let viewModel: MainViewModelProtocol
-    private let mainView = MainView()
+    private lazy var mainView: MainView = {
+       let view = MainView()
+        return view
+    }()
     
     init(viewModel: MainViewModelProtocol) {
         self.viewModel = viewModel
@@ -43,6 +46,6 @@ extension MainViewController: CodeView {
 
 extension MainViewController: MainViewControllerProtocol {
     func showBanners() {
-        print("Mostrou os banners")
+        mainView.updateView()
     }
 }

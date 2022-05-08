@@ -22,6 +22,10 @@ final class SpotlightCollectionViewCell: UICollectionViewCell {
     required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func setupCell(url: String) {
+        
+    }
 }
 
 extension SpotlightCollectionViewCell: CodeView {
