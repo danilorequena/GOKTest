@@ -14,6 +14,7 @@ target 'GOKTest' do
     # Pods for testing
     pod 'Quick'
     pod 'Nimble'
+    pod 'Nimble-Snapshots'
   end
 
   target 'GOKUISpecs' do
