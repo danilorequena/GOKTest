@@ -7,8 +7,12 @@
 
 import UIKit
 
+protocol SpotlightViewSectionDelegate: AnyObject {
+    func didSelectSpotlight(spotlight: Spotlight)
+}
+
 final class SpotlightViewSection: Section {
-    
+    weak var delegate: SpotlightViewSectionDelegate?
     private let spotlights: [Spotlight]
     
     init(spotlights: [Spotlight]) {
@@ -43,7 +47,8 @@ final class SpotlightViewSection: Section {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //TODO: - começar a Criar a navegação aqui
+        let spotlight = spotlights[indexPath.item]
+        delegate?.didSelectSpotlight(spotlight: spotlight)
     }
 }
 

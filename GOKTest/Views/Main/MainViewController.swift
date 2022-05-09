@@ -27,7 +27,12 @@ final class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        mainView.delegate = self
         viewModel.fetchData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
 }
@@ -45,5 +50,11 @@ extension MainViewController: CodeView {
 extension MainViewController: MainViewControllerProtocol {
     func showBanners(data: DigioModel) {
         mainView.updateView(data: data)
+    }
+}
+
+extension MainViewController: MainViewDelegate {
+    func didTapSpotlight(spotlight: Spotlight) {
+        viewModel.goToSpotlight(spotlight: spotlight)
     }
 }

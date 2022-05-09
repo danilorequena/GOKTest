@@ -7,7 +7,12 @@
 
 import UIKit
 
+protocol SpotlightViewDelegate: AnyObject {
+    func didTapSpotlight(spotlight: Spotlight)
+}
+
 final class SpotlightView: UIView {
+    weak var delegate: SpotlightViewDelegate?
     private let collectionView: DigioCollectionView = {
         let collection = DigioCollectionView(
             sections: [],
@@ -30,6 +35,7 @@ final class SpotlightView: UIView {
     
     func updateView(spotlights: [Spotlight]) {
         let section = SpotlightViewSection(spotlights: spotlights)
+        section.delegate = self
         collectionView.update(sections: [section])
     }
 }
@@ -41,5 +47,11 @@ extension SpotlightView: CodeView {
     
     func setupConstraints() {
         collectionView.bindFrameToSuperviewBounds()
+    }
+}
+
+extension SpotlightView: SpotlightViewSectionDelegate {
+    func didSelectSpotlight(spotlight: Spotlight) {
+        delegate?.didTapSpotlight(spotlight: spotlight)
     }
 }

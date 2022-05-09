@@ -9,6 +9,7 @@ import Foundation
 
 protocol MainViewModelProtocol: AnyObject {
     func fetchData()
+    func goToSpotlight(spotlight: Spotlight)
 }
 
 protocol MainViewModelDelegate: AnyObject {
@@ -18,7 +19,7 @@ protocol MainViewModelDelegate: AnyObject {
 
 final class MainViewModel: MainViewModelProtocol {
     weak var view: MainViewControllerProtocol?
-    
+    weak var navigationListener: MainViewNavigationListener?
     private let service: MainServiceProtocol
     
     init(service: MainServiceProtocol = MainService()) {
@@ -32,11 +33,14 @@ final class MainViewModel: MainViewModelProtocol {
             switch result {
             case let .success(data):
                 self.view?.showBanners(data: data)
-                print("deu certo")
             case let .failure(error):
                 print("deu errado")
             }
         }
+    }
+    
+    func goToSpotlight(spotlight: Spotlight) {
+        navigationListener?.goToSpotLight(spotlight: spotlight)
     }
 }
 

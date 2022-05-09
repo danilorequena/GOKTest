@@ -21,12 +21,30 @@ class ApplicationCoordinator: Coordinator {
         let mainViewController = MainViewController(viewModel: viewModel)
         
         viewModel.view = mainViewController
+        viewModel.navigationListener = self
         rootViewController.pushViewController (mainViewController, animated: false )
     }
     
     func  start() {
         window.rootViewController = rootViewController
         window.makeKeyAndVisible ()
+    }
+}
+
+extension ApplicationCoordinator: MainViewNavigationListener {
+    func goToSpotLight(spotlight: Spotlight) {
+        let viewModel = DetailViewModel(bannerURL: spotlight.bannerURL, descriptionText: spotlight.spotlightDescription)
+        let viewController = DetailViewController(viewModel: viewModel)
+        viewModel.view = viewController
+        rootViewController.pushViewController(viewController, animated: true)
+    }
+    
+    func goToCash(cash: Cash) {
+        
+    }
+    
+    func goToProduct(product: Product) {
+        
     }
 }
 

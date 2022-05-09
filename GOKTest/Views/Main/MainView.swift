@@ -7,7 +7,12 @@
 
 import UIKit
 
+protocol MainViewDelegate: AnyObject {
+    func didTapSpotlight(spotlight: Spotlight)
+}
+
 final class MainView: UIView {
+    weak var delegate: MainViewDelegate?
     private let title = UILabel.Factory.build(
         text: "Olá Danilo",
         textAlignment: .left,
@@ -32,6 +37,7 @@ final class MainView: UIView {
     
     func updateView(data: DigioModel) {
         spotlightView.updateView(spotlights: data.spotlight)
+        spotlightView.delegate = self
         cashView.setup(banner: data.cash)
         productView.updateView(with: data.products)
     }
@@ -80,5 +86,11 @@ extension MainView: CodeView {
     
     func setupAdditionalConfiguration() {
         backgroundColor = .white
+    }
+}
+
+extension MainView: SpotlightViewDelegate {
+    func didTapSpotlight(spotlight: Spotlight) {
+        delegate?.didTapSpotlight(spotlight: spotlight)
     }
 }
