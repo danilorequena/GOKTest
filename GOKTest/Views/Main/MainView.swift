@@ -9,6 +9,8 @@ import UIKit
 
 protocol MainViewDelegate: AnyObject {
     func didTapSpotlight(spotlight: Spotlight)
+    func didTapBanner(bannerData: Cash)
+    
 }
 
 final class MainView: UIView {
@@ -39,6 +41,7 @@ final class MainView: UIView {
         spotlightView.updateView(spotlights: data.spotlight)
         spotlightView.delegate = self
         cashView.setup(banner: data.cash)
+        cashView.delegate = self
         productView.updateView(with: data.products)
     }
 }
@@ -89,8 +92,12 @@ extension MainView: CodeView {
     }
 }
 
-extension MainView: SpotlightViewDelegate {
+extension MainView: SpotlightViewDelegate, CashViewDelegate {
     func didTapSpotlight(spotlight: Spotlight) {
         delegate?.didTapSpotlight(spotlight: spotlight)
+    }
+    func didTapImage() {
+        guard let data = cashView.bannerData else { return }
+        delegate?.didTapBanner(bannerData: data)
     }
 }

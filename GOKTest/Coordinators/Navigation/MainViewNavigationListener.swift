@@ -9,6 +9,6 @@ import Foundation
 
 protocol MainViewNavigationListener: AnyObject {
     func goToSpotLight(spotlight: Spotlight)
-    func goToCash(cash: Cash)
+    func goToBanner(banner: Cash)
     func goToProduct(product: Product)
 }

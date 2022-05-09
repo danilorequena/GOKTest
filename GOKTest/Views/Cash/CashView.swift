@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol CashViewDelegate: AnyObject {
+    func didTapImage()
+}
+
 final class CashView: UIView {
+    weak var delegate: CashViewDelegate?
+    var bannerData: Cash?
     private let stackView: UIStackView = {
        let stackView = UIStackView()
         stackView.axis = .vertical
@@ -22,10 +28,13 @@ final class CashView: UIView {
         textColor: .black
     )
     
-    private var cashView = UIImageView.Factory.build(
-        contentMode: .scaleAspectFit,
-        accessibilityIdentifier: "cashView"
-    )
+    private var cashView: UIImageView = {
+        let imageView = UIImageView.Factory.build(
+            contentMode: .scaleAspectFit,
+            accessibilityIdentifier: "cashView"
+        )
+        return imageView
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -40,6 +49,12 @@ final class CashView: UIView {
         title.text = banner.title
         title.applyColor(at: "Cash", color: UIColor.lightGray)
         cashView.download(from: banner.bannerURL, placeHolder: UIImage(named: "noImage"))
+        bannerData = banner
+    }
+    
+    @objc
+    private func tappedImage() {
+        delegate?.didTapImage()
     }
 }
 
@@ -64,5 +79,7 @@ extension CashView: CodeView {
             opacity: 0.2,
             color: UIColor.lightGray.cgColor
         )
+        
+        addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tappedImage)))
     }
 }

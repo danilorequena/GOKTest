@@ -39,8 +39,11 @@ extension ApplicationCoordinator: MainViewNavigationListener {
         rootViewController.pushViewController(viewController, animated: true)
     }
     
-    func goToCash(cash: Cash) {
-        
+    func goToBanner(banner: Cash) {
+        let viewModel = DetailViewModel(bannerURL: banner.bannerURL, descriptionText: banner.cashDescription)
+        let viewController = DetailViewController(viewModel: viewModel)
+        viewModel.view = viewController
+        rootViewController.pushViewController(viewController, animated: true)
     }
     
     func goToProduct(product: Product) {

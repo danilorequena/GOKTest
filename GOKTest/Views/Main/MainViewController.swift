@@ -57,4 +57,8 @@ extension MainViewController: MainViewDelegate {
     func didTapSpotlight(spotlight: Spotlight) {
         viewModel.goToSpotlight(spotlight: spotlight)
     }
+    
+    func didTapBanner(bannerData: Cash) {
+        viewModel.goToBanner(banner: bannerData)
+    }
 }
