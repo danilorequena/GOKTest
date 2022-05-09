@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol RetryViewDelegate: AnyObject {
+    func didTapReload()
+}
+
 final class RetryView: UIView {
+    weak var delegate: RetryViewDelegate?
+    
     private let stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
@@ -22,15 +28,19 @@ final class RetryView: UIView {
         accessibilityIdentifier: "errorImage"
     )
     
-    private let retryButton = UIButton.Factory.build(
-        title: "Recarregar",
-        titleColor: UIColor.white,
-        contentHorizontalAlignment: .center,
-        backgroundColor: (.init(named: "bcColorButton") ?? .green),
-        cornerRadius: 16,
-        textStyle: .headline,
-        accessibilityIdentifier: "retryButton"
-    )
+    private let retryButton: UIButton = {
+        let button = UIButton.Factory.build(
+            title: "Recarregar",
+            titleColor: UIColor.white,
+            contentHorizontalAlignment: .center,
+            backgroundColor: (.init(named: "bcColorButton") ?? .green),
+            cornerRadius: 16,
+            textStyle: .headline,
+            accessibilityIdentifier: "retryButton"
+        )
+        button.addTarget(self, action: #selector(reload), for: .touchUpInside)
+        return button
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -39,6 +49,11 @@ final class RetryView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    @objc
+    private func reload() {
+        delegate?.didTapReload()
     }
 }
 

@@ -65,9 +65,13 @@ extension MainViewController: MainViewControllerProtocol {
         retryView.isHidden = false
         mainView.isHidden = true
     }
+    
+    func setupAdditionalConfiguration() {
+        retryView.delegate = self
+    }
 }
 
-extension MainViewController: MainViewDelegate {
+extension MainViewController: MainViewDelegate, RetryViewDelegate {
     func didTapSpotlight(spotlight: Spotlight) {
         viewModel.goToSpotlight(spotlight: spotlight)
     }
@@ -78,5 +82,9 @@ extension MainViewController: MainViewDelegate {
     
     func didTapProduct(product: Product) {
         viewModel.goToProduct(product: product)
+    }
+    
+    func didTapReload() {
+        viewModel.fetchData()
     }
 }
