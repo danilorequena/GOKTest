@@ -13,21 +13,21 @@ import UIKit
 class MainViewControllerSpec: QuickSpec {
     override func spec() {
         describe("MainViewController") {
-            let controller = MainViewController()
-            var sut: CashView?
+            var sut: MainViewController!
+            var mainViewModelMock: MainViewModelMock!
             
-            beforeSuite {
-                controller.loadViewIfNeeded()
-                controller.viewDidLoad()
-                controller.beginAppearanceTransition(true, animated: false)
-                controller.endAppearanceTransition()
-                sut = controller.cashViewBanner
+            beforeEach {
+                mainViewModelMock = .init()
+                sut = .init(viewModel: mainViewModelMock)
             }
             
-            context("Check MainViewController is not Nil") {
-                it("is not nil") {
-                    expect(controller).toNot(beNil())
-                    expect(sut).toNot(beNil())
+            context("when receive data") {
+                beforeEach {
+                    sut.viewDidLoad()
+                }
+                
+                it("has to look and feel") {
+//                    expect(sut) == recordSnapshot()
                 }
             }
         }

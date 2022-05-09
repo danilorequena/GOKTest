@@ -13,7 +13,6 @@
 		FF1A94FD250024A300E8E680 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A94FC250024A300E8E680 /* UIView+Extension.swift */; };
 		FF1A950125006F1A00E8E680 /* MainViewController+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A950025006F1A00E8E680 /* MainViewController+Loading.swift */; };
 		FF3C8B0524FAF34E007FCFCE /* MainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3C8B0424FAF34E007FCFCE /* MainService.swift */; };
-		FF5997F82501632E00A51DC7 /* GOKSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5997F72501632E00A51DC7 /* GOKSpecs.swift */; };
 		FF5998062501634400A51DC7 /* GOKUISpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5998052501634400A51DC7 /* GOKUISpecs.swift */; };
 		FF59980E250163CC00A51DC7 /* MainViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5997EA25015FEA00A51DC7 /* MainViewControllerSpec.swift */; };
 		FFC5AF7724F99EE30087DC02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5AF7624F99EE30087DC02 /* AppDelegate.swift */; };
@@ -40,6 +39,7 @@
 		FFCB790128287E450004F33E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCB790028287E450004F33E /* DetailViewController.swift */; };
 		FFCB79042828BC9E0004F33E /* MainViewNavigationListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCB79032828BC9E0004F33E /* MainViewNavigationListener.swift */; };
 		FFCB79082828C2110004F33E /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCB79072828C2110004F33E /* DetailViewModel.swift */; };
+		FFCB790B2828D2620004F33E /* MainViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCB790A2828D2620004F33E /* MainViewModelMock.swift */; };
 		FFD8B8B624FB21EC0080D500 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD8B8B524FB21EC0080D500 /* Constants.swift */; };
 		FFD8B8B824FB24B90080D500 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD8B8B724FB24B90080D500 /* MainViewModel.swift */; };
 		FFE083E52825AC2300B43250 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE083E42825AC2300B43250 /* MainView.swift */; };
@@ -103,7 +103,6 @@
 		FF3C8B0424FAF34E007FCFCE /* MainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainService.swift; sourceTree = "<group>"; };
 		FF5997EA25015FEA00A51DC7 /* MainViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerSpec.swift; sourceTree = "<group>"; };
 		FF5997F52501632E00A51DC7 /* GOKSpecs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GOKSpecs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF5997F72501632E00A51DC7 /* GOKSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOKSpecs.swift; sourceTree = "<group>"; };
 		FF5997F92501632E00A51DC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF5998032501634400A51DC7 /* GOKUISpecs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GOKUISpecs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF5998052501634400A51DC7 /* GOKUISpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOKUISpecs.swift; sourceTree = "<group>"; };
@@ -136,6 +135,7 @@
 		FFCB790028287E450004F33E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		FFCB79032828BC9E0004F33E /* MainViewNavigationListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewNavigationListener.swift; sourceTree = "<group>"; };
 		FFCB79072828C2110004F33E /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		FFCB790A2828D2620004F33E /* MainViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelMock.swift; sourceTree = "<group>"; };
 		FFD8B8B524FB21EC0080D500 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FFD8B8B724FB24B90080D500 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		FFE083E42825AC2300B43250 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -239,7 +239,7 @@
 		FF5997F62501632E00A51DC7 /* GOKSpecs */ = {
 			isa = PBXGroup;
 			children = (
-				FF5997F72501632E00A51DC7 /* GOKSpecs.swift */,
+				FFCB79092828D24D0004F33E /* Mocks */,
 				FF5997EA25015FEA00A51DC7 /* MainViewControllerSpec.swift */,
 				FF5997F92501632E00A51DC7 /* Info.plist */,
 			);
@@ -425,6 +425,14 @@
 				FFCB79072828C2110004F33E /* DetailViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FFCB79092828D24D0004F33E /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				FFCB790A2828D2620004F33E /* MainViewModelMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		FFD8B8B424FB21DA0080D500 /* Utils */ = {
@@ -756,7 +764,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF59980E250163CC00A51DC7 /* MainViewControllerSpec.swift in Sources */,
-				FF5997F82501632E00A51DC7 /* GOKSpecs.swift in Sources */,
+				FFCB790B2828D2620004F33E /* MainViewModelMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
