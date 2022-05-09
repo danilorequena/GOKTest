@@ -38,6 +38,17 @@ class MainViewModelSpec: QuickSpec {
                 }
             }
             
+            context("when receive error") {
+                beforeEach {
+                    mainServiceMock.dataResult = .failure(.apiError)
+                    sut.fetchData()
+                }
+                
+                it("has to look and feel") {
+                    expect(mainViewControllerMock.hasCalledHideBanners) == true
+                }
+            }
+            
             context("goToSpotLight") {
                 beforeEach {
                     sut.goToSpotlight(spotlight: Spotlight.mock())

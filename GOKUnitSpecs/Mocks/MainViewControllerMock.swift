@@ -10,8 +10,13 @@ import GOKTest
 
 final class MainViewControllerMock: MainViewControllerProtocol {
     private(set) var hasCalledShowBanners = false
+    private(set) var hasCalledHideBanners = false
     
     func showBanners(data: DigioModel) {
         hasCalledShowBanners = true
+    }
+    
+    func hideBanners() {
+        hasCalledHideBanners = true
     }
 }

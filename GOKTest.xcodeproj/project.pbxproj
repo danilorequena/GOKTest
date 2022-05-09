@@ -22,6 +22,14 @@
 		FF414D33282951E3006E6434 /* Product+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF414D32282951E3006E6434 /* Product+Mock.swift */; };
 		FF414D3628295320006E6434 /* RetryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF414D3528295320006E6434 /* RetryView.swift */; };
 		FF414D382829544F006E6434 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF414D372829544F006E6434 /* UIButton+Extension.swift */; };
+		FF414D3B28297261006E6434 /* DetailViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF414D3A28297261006E6434 /* DetailViewControllerSpec.swift */; };
+		FF414D3F2829742E006E6434 /* DetailViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF414D3E2829742E006E6434 /* DetailViewModelMock.swift */; };
+		FF414D4228298991006E6434 /* DetailViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF414D4128298991006E6434 /* DetailViewModelSpec.swift */; };
+		FF414D4428298AC5006E6434 /* DetailViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF414D4328298AC5006E6434 /* DetailViewControllerMock.swift */; };
+		FF414D4728298D14006E6434 /* SpotlightSectionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF414D4628298D14006E6434 /* SpotlightSectionSpec.swift */; };
+		FF414D492829954E006E6434 /* SpotlightSectionDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF414D482829954E006E6434 /* SpotlightSectionDelegateMock.swift */; };
+		FF414D532829B181006E6434 /* ProductsSectionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF414D522829B181006E6434 /* ProductsSectionSpec.swift */; };
+		FF414D552829B1CC006E6434 /* ProductsSectionDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF414D542829B1CC006E6434 /* ProductsSectionDelegateMock.swift */; };
 		FFB30E5F2828D79D00FBF8B5 /* Pods_GOKTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFB30E5E2828D79D00FBF8B5 /* Pods_GOKTest.framework */; };
 		FFB30E682828D99500FBF8B5 /* GOKUnitSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB30E672828D99500FBF8B5 /* GOKUnitSpecs.swift */; };
 		FFC11A262828DBEB00CF8F14 /* MainViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC11A252828DBEB00CF8F14 /* MainViewModelMock.swift */; };
@@ -49,12 +57,10 @@
 		FFCB790128287E450004F33E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCB790028287E450004F33E /* DetailViewController.swift */; };
 		FFCB79042828BC9E0004F33E /* MainViewNavigationListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCB79032828BC9E0004F33E /* MainViewNavigationListener.swift */; };
 		FFCB79082828C2110004F33E /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCB79072828C2110004F33E /* DetailViewModel.swift */; };
-		FFD8B8B624FB21EC0080D500 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD8B8B524FB21EC0080D500 /* Constants.swift */; };
 		FFD8B8B824FB24B90080D500 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD8B8B724FB24B90080D500 /* MainViewModel.swift */; };
 		FFE083E52825AC2300B43250 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE083E42825AC2300B43250 /* MainView.swift */; };
 		FFE083F02825ACC600B43250 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE083EF2825ACC600B43250 /* CodeView.swift */; };
 		FFE083F22825AD0C00B43250 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE083F12825AD0C00B43250 /* UIView+Constraints.swift */; };
-		FFE083F62825AF9A00B43250 /* MainViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE083F52825AF9A00B43250 /* MainViewManager.swift */; };
 		FFE083FA2825B08600B43250 /* DescribeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE083F92825B08600B43250 /* DescribeProtocol.swift */; };
 		FFE083FC2825B11700B43250 /* NSObject+DescribeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE083FB2825B11700B43250 /* NSObject+DescribeProtocol.swift */; };
 		FFE083FF2825B37900B43250 /* SpotlightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE083FE2825B37900B43250 /* SpotlightTableViewCell.swift */; };
@@ -116,6 +122,14 @@
 		FF414D32282951E3006E6434 /* Product+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+Mock.swift"; sourceTree = "<group>"; };
 		FF414D3528295320006E6434 /* RetryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetryView.swift; sourceTree = "<group>"; };
 		FF414D372829544F006E6434 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		FF414D3A28297261006E6434 /* DetailViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerSpec.swift; sourceTree = "<group>"; };
+		FF414D3E2829742E006E6434 /* DetailViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelMock.swift; sourceTree = "<group>"; };
+		FF414D4128298991006E6434 /* DetailViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelSpec.swift; sourceTree = "<group>"; };
+		FF414D4328298AC5006E6434 /* DetailViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerMock.swift; sourceTree = "<group>"; };
+		FF414D4628298D14006E6434 /* SpotlightSectionSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightSectionSpec.swift; sourceTree = "<group>"; };
+		FF414D482829954E006E6434 /* SpotlightSectionDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightSectionDelegateMock.swift; sourceTree = "<group>"; };
+		FF414D522829B181006E6434 /* ProductsSectionSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsSectionSpec.swift; sourceTree = "<group>"; };
+		FF414D542829B1CC006E6434 /* ProductsSectionDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsSectionDelegateMock.swift; sourceTree = "<group>"; };
 		FFB30E5E2828D79D00FBF8B5 /* Pods_GOKTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_GOKTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFB30E652828D99500FBF8B5 /* GOKUnitSpecs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GOKUnitSpecs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFB30E672828D99500FBF8B5 /* GOKUnitSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOKUnitSpecs.swift; sourceTree = "<group>"; };
@@ -147,12 +161,10 @@
 		FFCB790028287E450004F33E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		FFCB79032828BC9E0004F33E /* MainViewNavigationListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewNavigationListener.swift; sourceTree = "<group>"; };
 		FFCB79072828C2110004F33E /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
-		FFD8B8B524FB21EC0080D500 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FFD8B8B724FB24B90080D500 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		FFE083E42825AC2300B43250 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		FFE083EF2825ACC600B43250 /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
 		FFE083F12825AD0C00B43250 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
-		FFE083F52825AF9A00B43250 /* MainViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewManager.swift; sourceTree = "<group>"; };
 		FFE083F92825B08600B43250 /* DescribeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescribeProtocol.swift; sourceTree = "<group>"; };
 		FFE083FB2825B11700B43250 /* NSObject+DescribeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+DescribeProtocol.swift"; sourceTree = "<group>"; };
 		FFE083FE2825B37900B43250 /* SpotlightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightTableViewCell.swift; sourceTree = "<group>"; };
@@ -256,6 +268,7 @@
 		FF414D22282948C9006E6434 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FF414D4528298CFB006E6434 /* Section */,
 				FFC11A222828DBC900CF8F14 /* MainViewControllerSpec.swift */,
 			);
 			path = View;
@@ -277,11 +290,46 @@
 			path = RetryView;
 			sourceTree = "<group>";
 		};
+		FF414D392829723C006E6434 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				FF414D3D28297404006E6434 /* ViewModel */,
+				FF414D3C282973FF006E6434 /* View */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		FF414D3C282973FF006E6434 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FF414D3A28297261006E6434 /* DetailViewControllerSpec.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FF414D3D28297404006E6434 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FF414D4128298991006E6434 /* DetailViewModelSpec.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FF414D4528298CFB006E6434 /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				FF414D4628298D14006E6434 /* SpotlightSectionSpec.swift */,
+				FF414D522829B181006E6434 /* ProductsSectionSpec.swift */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
 		FFB30E662828D99500FBF8B5 /* GOKUnitSpecs */ = {
 			isa = PBXGroup;
 			children = (
 				FFC11A242828DBDD00CF8F14 /* Mocks */,
 				FF414D2028294890006E6434 /* Main */,
+				FF414D392829723C006E6434 /* Detail */,
 				FFB30E672828D99500FBF8B5 /* GOKUnitSpecs.swift */,
 			);
 			path = GOKUnitSpecs;
@@ -290,6 +338,7 @@
 		FFC11A242828DBDD00CF8F14 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				FF414D3E2829742E006E6434 /* DetailViewModelMock.swift */,
 				FFC11A252828DBEB00CF8F14 /* MainViewModelMock.swift */,
 				FF414D1E2829441E006E6434 /* DigioModelMock.swift */,
 				FF414D262829495E006E6434 /* MainServiceMock.swift */,
@@ -298,6 +347,9 @@
 				FF414D2E28294FF8006E6434 /* MainNavigationListenerMock.swift */,
 				FF414D3028295174006E6434 /* Cash+Mock.swift */,
 				FF414D32282951E3006E6434 /* Product+Mock.swift */,
+				FF414D4328298AC5006E6434 /* DetailViewControllerMock.swift */,
+				FF414D482829954E006E6434 /* SpotlightSectionDelegateMock.swift */,
+				FF414D542829B1CC006E6434 /* ProductsSectionDelegateMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -328,7 +380,6 @@
 				FFE084022825B48E00B43250 /* Customviews */,
 				FFE083EE2825ACAF00B43250 /* Protocols */,
 				FF1A94FB2500246D00E8E680 /* Extensions */,
-				FFD8B8B424FB21DA0080D500 /* Utils */,
 				FFC5AFAC24F99F230087DC02 /* Models */,
 				FFC5AFAB24F99F1D0087DC02 /* Views */,
 				FFC5AFAE24F99F300087DC02 /* ViewModels */,
@@ -463,14 +514,6 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		FFD8B8B424FB21DA0080D500 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				FFD8B8B524FB21EC0080D500 /* Constants.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
 		FFE083EE2825ACAF00B43250 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -485,19 +528,10 @@
 		FFE083F32825AF7700B43250 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				FFE083F42825AF8400B43250 /* Manager */,
 				FFC5AFBC24FAE8050087DC02 /* MainViewController.swift */,
 				FFE083E42825AC2300B43250 /* MainView.swift */,
 			);
 			path = Main;
-			sourceTree = "<group>";
-		};
-		FFE083F42825AF8400B43250 /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-				FFE083F52825AF9A00B43250 /* MainViewManager.swift */,
-			);
-			path = Manager;
 			sourceTree = "<group>";
 		};
 		FFE083FD2825B33700B43250 /* SpotLight */ = {
@@ -721,14 +755,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF414D272829495E006E6434 /* MainServiceMock.swift in Sources */,
+				FF414D492829954E006E6434 /* SpotlightSectionDelegateMock.swift in Sources */,
 				FFB30E682828D99500FBF8B5 /* GOKUnitSpecs.swift in Sources */,
 				FF414D2D28294F0F006E6434 /* Spotlight+Mock.swift in Sources */,
+				FF414D4728298D14006E6434 /* SpotlightSectionSpec.swift in Sources */,
 				FFC11A262828DBEB00CF8F14 /* MainViewModelMock.swift in Sources */,
+				FF414D4228298991006E6434 /* DetailViewModelSpec.swift in Sources */,
 				FF414D1F2829441E006E6434 /* DigioModelMock.swift in Sources */,
 				FF414D33282951E3006E6434 /* Product+Mock.swift in Sources */,
+				FF414D3B28297261006E6434 /* DetailViewControllerSpec.swift in Sources */,
 				FF414D2F28294FF8006E6434 /* MainNavigationListenerMock.swift in Sources */,
+				FF414D552829B1CC006E6434 /* ProductsSectionDelegateMock.swift in Sources */,
+				FF414D3F2829742E006E6434 /* DetailViewModelMock.swift in Sources */,
 				FF414D25282948E5006E6434 /* MainViewModelSpec.swift in Sources */,
+				FF414D532829B181006E6434 /* ProductsSectionSpec.swift in Sources */,
 				FF414D2B28294C57006E6434 /* MainViewControllerMock.swift in Sources */,
+				FF414D4428298AC5006E6434 /* DetailViewControllerMock.swift in Sources */,
 				FF414D3128295174006E6434 /* Cash+Mock.swift in Sources */,
 				FF3741792828E0E900E5DFA6 /* MainViewControllerSpec.swift in Sources */,
 			);
@@ -746,7 +788,6 @@
 				FFC5AF8324F99EE30087DC02 /* GOKTest.xcdatamodeld in Sources */,
 				FFE084132826BC0500B43250 /* ApiServiceError.swift in Sources */,
 				FFE084042825B4A900B43250 /* DigioCollectionView.swift in Sources */,
-				FFE083F62825AF9A00B43250 /* MainViewManager.swift in Sources */,
 				FFE084012825B41C00B43250 /* SpotlightView.swift in Sources */,
 				FFCB78EA282799670004F33E /* UILabel+Extension.swift in Sources */,
 				FFCB790128287E450004F33E /* DetailViewController.swift in Sources */,
@@ -776,7 +817,6 @@
 				FF1A94FD250024A300E8E680 /* UIView+Extension.swift in Sources */,
 				FFCB78E828278CE90004F33E /* UIImageView+KingFisher.swift in Sources */,
 				FFC5AFBB24F9A5F60087DC02 /* Coordinator.swift in Sources */,
-				FFD8B8B624FB21EC0080D500 /* Constants.swift in Sources */,
 				FFCB78EC282799B80004F33E /* UIImage+Extension.swift in Sources */,
 				FFE083F22825AD0C00B43250 /* UIView+Constraints.swift in Sources */,
 				FFC5AFBE24FAE8050087DC02 /* MainViewController.swift in Sources */,

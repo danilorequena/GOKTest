@@ -16,4 +16,24 @@ extension Spotlight {
             spotlightDescription: "teste"
         )
     }
+    
+    static func mockArray() -> [Spotlight] {
+        [
+            Spotlight(
+            name: "Teste",
+            bannerURL: "https://s3-sa-east-1.amazonaws.com/digio-exame/uber_banner.png",
+            spotlightDescription: "teste"
+        ),
+            Spotlight(
+                name: "Teste",
+                bannerURL: "https://s3-sa-east-1.amazonaws.com/digio-exame/uber_banner.png",
+                spotlightDescription: "teste"
+            ),
+            Spotlight(
+                name: "Teste",
+                bannerURL: "https://s3-sa-east-1.amazonaws.com/digio-exame/uber_banner.png",
+                spotlightDescription: "teste"
+            )
+        ]
+    }
 }

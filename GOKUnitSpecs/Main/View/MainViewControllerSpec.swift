@@ -30,6 +30,16 @@ class MainViewControllerSpec: QuickSpec {
                     expect(sut) == snapshot()
                 }
             }
+            
+            context("when receive error") {
+                beforeEach {
+                    sut.hideBanners()
+                }
+                
+                it("has to look and feel") {
+                    expect(sut) == snapshot()
+                }
+            }
         }
     }
 }

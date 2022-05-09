@@ -17,7 +17,7 @@ final class MainViewController: UIViewController {
     private let mainView = MainView()
     private let retryView: RetryView = {
         let view = RetryView()
-        
+        view.isHidden = true
         return view
     }()
     
