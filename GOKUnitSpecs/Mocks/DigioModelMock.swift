@@ -47,4 +47,43 @@ extension DigioModel {
             )
         )
     }
+    
+    static func mockWithoutImage() -> DigioModel {
+        DigioModel(
+            spotlight: [
+                Spotlight(
+                    name: "teste",
+                    bannerURL: "",
+                    spotlightDescription: "teste"
+                ),
+                Spotlight(
+                    name: "teste",
+                    bannerURL: "",
+                    spotlightDescription: "teste"
+                )
+            ],
+            products: [
+                Product(
+                    name: "teste",
+                    imageURL: "",
+                    productDescription: "teste"
+                ),
+                Product(
+                    name: "teste",
+                    imageURL: "",
+                    productDescription: "teste"
+                ),
+                Product(
+                    name: "teste",
+                    imageURL: "",
+                    productDescription: "teste"
+                )
+            ],
+            cash: Cash(
+                title: "teste",
+                bannerURL: "",
+                cashDescription: "teste"
+            )
+        )
+    }
 }

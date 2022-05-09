@@ -22,12 +22,24 @@ class MainViewControllerSpec: QuickSpec {
             }
             
             context("when receive data") {
-                beforeEach {
-                    sut.showBanners(data: DigioModel.mock())
+                context("when receive error image") {
+                    beforeEach {
+                        sut.showBanners(data: DigioModel.mockWithoutImage())
+                    }
+                    
+                    it("has to look and feel") {
+                        expect(sut) == snapshot()
+                    }
                 }
                 
-                it("has to look and feel") {
-                    expect(sut) == snapshot()
+                context("when receive success image") {
+                    beforeEach {
+                        sut.showBanners(data: DigioModel.mock())
+                    }
+                    
+                    it("has to look and feel") {
+                        expect(sut).toEventually(haveValidSnapshot(tolerance: 2.0))
+                    }
                 }
             }
             
