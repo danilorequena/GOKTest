@@ -35,8 +35,8 @@ final class MainViewModel: MainViewModelProtocol {
             switch result {
             case let .success(data):
                 self.view?.showBanners(data: data)
-            case let .failure(error):
-                print("deu errado")
+            case .failure:
+                self.view?.hideBanners()
             }
         }
     }

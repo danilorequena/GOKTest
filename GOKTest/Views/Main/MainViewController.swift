@@ -9,11 +9,17 @@ import UIKit
 
 protocol MainViewControllerProtocol: AnyObject {
     func showBanners(data: DigioModel)
+    func hideBanners()
 }
 
 final class MainViewController: UIViewController {
     private let viewModel: MainViewModelProtocol
     private let mainView = MainView()
+    private let retryView: RetryView = {
+        let view = RetryView()
+        
+        return view
+    }()
     
     init(viewModel: MainViewModelProtocol) {
         self.viewModel = viewModel
@@ -39,17 +45,25 @@ final class MainViewController: UIViewController {
 
 extension MainViewController: CodeView {
     func buildViewHierarchy() {
-        view.addSubview(mainView)
+        view.addSubviews(mainView, retryView)
     }
     
     func setupConstraints() {
         mainView.bindFrameToSuperviewBounds()
+        retryView.bindFrameToSuperviewBounds()
     }
 }
 
 extension MainViewController: MainViewControllerProtocol {
     func showBanners(data: DigioModel) {
+        retryView.isHidden = true
+        mainView.isHidden = false
         mainView.updateView(data: data)
+    }
+    
+    func hideBanners() {
+        retryView.isHidden = false
+        mainView.isHidden = true
     }
 }
 

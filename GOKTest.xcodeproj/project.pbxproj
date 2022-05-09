@@ -20,6 +20,8 @@
 		FF414D2F28294FF8006E6434 /* MainNavigationListenerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF414D2E28294FF8006E6434 /* MainNavigationListenerMock.swift */; };
 		FF414D3128295174006E6434 /* Cash+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF414D3028295174006E6434 /* Cash+Mock.swift */; };
 		FF414D33282951E3006E6434 /* Product+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF414D32282951E3006E6434 /* Product+Mock.swift */; };
+		FF414D3628295320006E6434 /* RetryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF414D3528295320006E6434 /* RetryView.swift */; };
+		FF414D382829544F006E6434 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF414D372829544F006E6434 /* UIButton+Extension.swift */; };
 		FFB30E5F2828D79D00FBF8B5 /* Pods_GOKTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFB30E5E2828D79D00FBF8B5 /* Pods_GOKTest.framework */; };
 		FFB30E682828D99500FBF8B5 /* GOKUnitSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB30E672828D99500FBF8B5 /* GOKUnitSpecs.swift */; };
 		FFC11A262828DBEB00CF8F14 /* MainViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC11A252828DBEB00CF8F14 /* MainViewModelMock.swift */; };
@@ -112,6 +114,8 @@
 		FF414D2E28294FF8006E6434 /* MainNavigationListenerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationListenerMock.swift; sourceTree = "<group>"; };
 		FF414D3028295174006E6434 /* Cash+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cash+Mock.swift"; sourceTree = "<group>"; };
 		FF414D32282951E3006E6434 /* Product+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+Mock.swift"; sourceTree = "<group>"; };
+		FF414D3528295320006E6434 /* RetryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetryView.swift; sourceTree = "<group>"; };
+		FF414D372829544F006E6434 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		FFB30E5E2828D79D00FBF8B5 /* Pods_GOKTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_GOKTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFB30E652828D99500FBF8B5 /* GOKUnitSpecs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GOKUnitSpecs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFB30E672828D99500FBF8B5 /* GOKUnitSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOKUnitSpecs.swift; sourceTree = "<group>"; };
@@ -235,6 +239,7 @@
 				FFCB78EB282799B80004F33E /* UIImage+Extension.swift */,
 				FFCB78FB282848F40004F33E /* UIStackView+Extension.swift */,
 				FFCB78FD28285C5C0004F33E /* UIView+Shadow.swift */,
+				FF414D372829544F006E6434 /* UIButton+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -262,6 +267,14 @@
 				FF414D24282948E5006E6434 /* MainViewModelSpec.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FF414D34282952AF006E6434 /* RetryView */ = {
+			isa = PBXGroup;
+			children = (
+				FF414D3528295320006E6434 /* RetryView.swift */,
+			);
+			path = RetryView;
 			sourceTree = "<group>";
 		};
 		FFB30E662828D99500FBF8B5 /* GOKUnitSpecs */ = {
@@ -330,6 +343,7 @@
 		FFC5AFAB24F99F1D0087DC02 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FF414D34282952AF006E6434 /* RetryView */,
 				FFCB78FF28287E320004F33E /* Detail */,
 				FFCB78F5282840390004F33E /* Produtcs */,
 				FFCB78F3282840100004F33E /* Cash */,
@@ -757,6 +771,7 @@
 				FFE083FA2825B08600B43250 /* DescribeProtocol.swift in Sources */,
 				FFE083E52825AC2300B43250 /* MainView.swift in Sources */,
 				FFCB78FC282848F40004F33E /* UIStackView+Extension.swift in Sources */,
+				FF414D3628295320006E6434 /* RetryView.swift in Sources */,
 				FFE084112825BB1500B43250 /* UIImageView+Extension.swift in Sources */,
 				FF1A94FD250024A300E8E680 /* UIView+Extension.swift in Sources */,
 				FFCB78E828278CE90004F33E /* UIImageView+KingFisher.swift in Sources */,
@@ -765,6 +780,7 @@
 				FFCB78EC282799B80004F33E /* UIImage+Extension.swift in Sources */,
 				FFE083F22825AD0C00B43250 /* UIView+Constraints.swift in Sources */,
 				FFC5AFBE24FAE8050087DC02 /* MainViewController.swift in Sources */,
+				FF414D382829544F006E6434 /* UIButton+Extension.swift in Sources */,
 				FFE084062825B52E00B43250 /* DigioCollectionViewDataSource.swift in Sources */,
 				FFE084162826BCE800B43250 /* Endpoint.swift in Sources */,
 				FFCB78F9282840900004F33E /* ProductsCollectionViewCell.swift in Sources */,
