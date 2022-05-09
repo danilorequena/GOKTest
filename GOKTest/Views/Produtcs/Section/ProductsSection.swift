@@ -7,7 +7,12 @@
 
 import UIKit
 
+protocol ProductsSectionDelegate: AnyObject {
+    func didTapProduct(product: Product)
+}
+
 final class ProductsSection: Section {
+    weak var delegate: ProductsSectionDelegate?
     private let products: [Product]
     
     init(products: [Product]) {
@@ -41,5 +46,8 @@ final class ProductsSection: Section {
         .zero
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let product = products[indexPath.item]
+        delegate?.didTapProduct(product: product)
+    }
 }

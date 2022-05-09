@@ -7,7 +7,12 @@
 
 import UIKit
 
+protocol ProductsViewDelegate: AnyObject {
+    func didTapProduct(product: Product)
+}
+
 final class ProductsView: UIView {
+    weak var delegate: ProductsViewDelegate?
     private let title = UILabel.Factory.build(
         text: "Produtos",
         textAlignment: .left,
@@ -38,6 +43,7 @@ final class ProductsView: UIView {
     
     func updateView(with products: [Product]) {
         let section = ProductsSection(products: products)
+        section.delegate = self
         collectonView.update(sections: [section])
     }
     
@@ -64,5 +70,11 @@ extension ProductsView: CodeView {
             insets: .init(top: 16, left: 0, bottom: 0, right: 0)
         )
         collectonView.anchor(height: 110)
+    }
+}
+
+extension ProductsView: ProductsSectionDelegate {
+    func didTapProduct(product: Product) {
+        delegate?.didTapProduct(product: product)
     }
 }

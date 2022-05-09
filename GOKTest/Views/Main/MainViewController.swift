@@ -61,4 +61,8 @@ extension MainViewController: MainViewDelegate {
     func didTapBanner(bannerData: Cash) {
         viewModel.goToBanner(banner: bannerData)
     }
+    
+    func didTapProduct(product: Product) {
+        viewModel.goToProduct(product: product)
+    }
 }

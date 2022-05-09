@@ -11,6 +11,7 @@ protocol MainViewModelProtocol: AnyObject {
     func fetchData()
     func goToSpotlight(spotlight: Spotlight)
     func goToBanner(banner: Cash)
+    func goToProduct(product: Product)
 }
 
 protocol MainViewModelDelegate: AnyObject {
@@ -46,6 +47,10 @@ final class MainViewModel: MainViewModelProtocol {
     
     func goToBanner(banner: Cash) {
         navigationListener?.goToBanner(banner: banner)
+    }
+    
+    func goToProduct(product: Product) {
+        navigationListener?.goToProduct(product: product)
     }
 }
 
