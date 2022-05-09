@@ -19,17 +19,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-GOKSpecs.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-GOKTest-GOKUISpecs.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-GOKTest.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-GOKUnitSpecs.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

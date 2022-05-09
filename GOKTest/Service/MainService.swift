@@ -8,7 +8,7 @@
 import Foundation
 
 protocol MainServiceProtocol: AnyObject {
-    func fetchDiscoverMovies(completion: @escaping (Result<DigioModel, ApiServiceError>) -> ())
+    func fetchData(completion: @escaping (Result<DigioModel, ApiServiceError>) -> ())
 }
 
 final class MainService: MainServiceProtocol {
@@ -18,7 +18,7 @@ final class MainService: MainServiceProtocol {
     private let urlSession = URLSession.shared
     private let jsonDecoder = JSONDecoder()
     
-    func fetchDiscoverMovies(completion: @escaping (Result<DigioModel, ApiServiceError>) -> ()) {
+    func fetchData(completion: @escaping (Result<DigioModel, ApiServiceError>) -> ()) {
         let endpoint = MainEndpoint()
         guard let url = URL(string: "\(endpoint.path)") else {
             completion(.failure(.invalidEndpoint))

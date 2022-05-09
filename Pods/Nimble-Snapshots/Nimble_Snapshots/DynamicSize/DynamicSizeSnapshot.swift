@@ -65,7 +65,7 @@ class ConstraintViewResizer: ViewResizer {
 
         view.layoutIfNeeded()
 
-        // iOS 9+ BUG: Before the first draw, iOS will not calculate the layout, 
+        //iOS 9+ BUG: Before the first draw, iOS will not calculate the layout, 
         // it add a _UITemporaryLayoutWidth equals to its bounds and create a conflict. 
         // So to it do all the layout we create a Window and add it as subview
         if view.bounds.width != size.width || view.bounds.height != size.height {
@@ -152,34 +152,34 @@ public func haveValidDynamicSizeSnapshot(named name: String? = nil,
                                          usesDrawRect: Bool = false,
                                          pixelTolerance: CGFloat? = nil,
                                          tolerance: CGFloat? = nil,
-                                         resizeMode: ResizeMode = .frame,
-                                         shouldIgnoreScale: Bool = false) -> Predicate<Snapshotable> {
-    return Predicate { actualExpression in
+                                         resizeMode: ResizeMode = .frame) -> Predicate<Snapshotable> {
+    return Predicate.fromDeprecatedClosure { actualExpression, failureMessage in
         return performDynamicSizeSnapshotTest(name,
                                               identifier: identifier,
                                               sizes: sizes,
                                               isDeviceAgnostic: isDeviceAgnostic,
                                               usesDrawRect: usesDrawRect,
                                               actualExpression: actualExpression,
+                                              failureMessage: failureMessage,
                                               tolerance: tolerance,
                                               pixelTolerance: pixelTolerance,
                                               isRecord: false,
-                                              resizeMode: resizeMode,
-                                              shouldIgnoreScale: shouldIgnoreScale)
+                                              resizeMode: resizeMode)
     }
 }
 
+// swiftlint:disable:next function_parameter_count
 func performDynamicSizeSnapshotTest(_ name: String?,
                                     identifier: String? = nil,
                                     sizes: [String: CGSize],
                                     isDeviceAgnostic: Bool = false,
                                     usesDrawRect: Bool = false,
                                     actualExpression: Expression<Snapshotable>,
+                                    failureMessage: FailureMessage,
                                     tolerance: CGFloat? = nil,
                                     pixelTolerance: CGFloat? = nil,
                                     isRecord: Bool,
-                                    resizeMode: ResizeMode,
-                                    shouldIgnoreScale: Bool = false) -> PredicateResult {
+                                    resizeMode: ResizeMode) -> Bool {
     // swiftlint:disable:next force_try force_unwrapping
     let instance = try! actualExpression.evaluate()!
     let testFileLocation = actualExpression.location.file
@@ -203,37 +203,30 @@ func performDynamicSizeSnapshotTest(_ name: String?,
 
         resizer.resize(view: view, for: size)
 
-        let filename = "\(actualExpression.location.file)"
-
         return FBSnapshotTest.compareSnapshot(instance, isDeviceAgnostic: isDeviceAgnostic, usesDrawRect: usesDrawRect,
                                               snapshot: finalSnapshotName, record: isRecord,
                                               referenceDirectory: referenceImageDirectory, tolerance: tolerance,
                                               perPixelTolerance: pixelTolerance,
-                                              filename: filename, identifier: nil,
-                                              shouldIgnoreScale: shouldIgnoreScale)
+                                              filename: actualExpression.location.file, identifier: nil)
     }
 
     if isRecord {
-        var message: String = ""
-        let name = name ?? snapshotName
         if result.filter({ !$0 }).isEmpty {
-            message = "snapshot \(name) successfully recorded, replace recordSnapshot with a check"
+            let name = name ?? snapshotName
+            failureMessage.actualValue = "snapshot \(name) successfully recorded, replace recordSnapshot with a check"
         } else {
-            message = "expected to record a snapshot in \(name)"
+            failureMessage.actualValue = "expected to record a snapshot in \(String(describing: name))"
         }
 
-        return PredicateResult(status: PredicateStatus(bool: false),
-                               message: .fail(message))
+        return false
     } else {
-        var message: String = ""
         if !result.filter({ !$0 }).isEmpty {
-            message = "expected a matching snapshot in \(snapshotName)"
-            return PredicateResult(status: PredicateStatus(bool: false),
-                                   message: .fail(message))
+            clearFailureMessage(failureMessage)
+            failureMessage.actualValue = "expected a matching snapshot in \(snapshotName)"
+            return false
         }
 
-        return PredicateResult(status: PredicateStatus(bool: true),
-                               message: .fail(message))
+        return true
     }
 }
 
@@ -249,18 +242,17 @@ public func recordDynamicSizeSnapshot(named name: String? = nil,
                                       sizes: [String: CGSize],
                                       isDeviceAgnostic: Bool = false,
                                       usesDrawRect: Bool = false,
-                                      resizeMode: ResizeMode = .frame,
-                                      shouldIgnoreScale: Bool = false) -> Predicate<Snapshotable> {
-    return Predicate { actualExpression in
+                                      resizeMode: ResizeMode = .frame) -> Predicate<Snapshotable> {
+    return Predicate.fromDeprecatedClosure { actualExpression, failureMessage in
         return performDynamicSizeSnapshotTest(name,
                                               identifier: identifier,
                                               sizes: sizes,
                                               isDeviceAgnostic: isDeviceAgnostic,
                                               usesDrawRect: usesDrawRect,
                                               actualExpression: actualExpression,
+                                              failureMessage: failureMessage,
                                               isRecord: true,
-                                              resizeMode: resizeMode,
-                                              shouldIgnoreScale: shouldIgnoreScale)
+                                              resizeMode: resizeMode)
     }
 }
 

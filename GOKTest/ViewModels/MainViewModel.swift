@@ -30,7 +30,7 @@ final class MainViewModel: MainViewModelProtocol {
     
 
     func fetchData() {
-        service.fetchDiscoverMovies { [weak self] result in
+        service.fetchData { [weak self] result in
             guard let self = self else { return }
             switch result {
             case let .success(data):

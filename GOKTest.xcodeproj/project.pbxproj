@@ -7,10 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B50ECED0CB3FE54D3D348838 /* Pods_GOKUnitSpecs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DC5833DC53F0C7EEB6D1271 /* Pods_GOKUnitSpecs.framework */; };
 		FF1A94FD250024A300E8E680 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A94FC250024A300E8E680 /* UIView+Extension.swift */; };
 		FF1A950125006F1A00E8E680 /* MainViewController+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A950025006F1A00E8E680 /* MainViewController+Loading.swift */; };
+		FF3741792828E0E900E5DFA6 /* MainViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC11A222828DBC900CF8F14 /* MainViewControllerSpec.swift */; };
 		FF3C8B0524FAF34E007FCFCE /* MainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3C8B0424FAF34E007FCFCE /* MainService.swift */; };
+		FF414D1F2829441E006E6434 /* DigioModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF414D1E2829441E006E6434 /* DigioModelMock.swift */; };
+		FF414D25282948E5006E6434 /* MainViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF414D24282948E5006E6434 /* MainViewModelSpec.swift */; };
+		FF414D272829495E006E6434 /* MainServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF414D262829495E006E6434 /* MainServiceMock.swift */; };
+		FF414D2B28294C57006E6434 /* MainViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF414D2A28294C57006E6434 /* MainViewControllerMock.swift */; };
+		FF414D2D28294F0F006E6434 /* Spotlight+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF414D2C28294F0F006E6434 /* Spotlight+Mock.swift */; };
+		FF414D2F28294FF8006E6434 /* MainNavigationListenerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF414D2E28294FF8006E6434 /* MainNavigationListenerMock.swift */; };
+		FF414D3128295174006E6434 /* Cash+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF414D3028295174006E6434 /* Cash+Mock.swift */; };
+		FF414D33282951E3006E6434 /* Product+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF414D32282951E3006E6434 /* Product+Mock.swift */; };
 		FFB30E5F2828D79D00FBF8B5 /* Pods_GOKTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFB30E5E2828D79D00FBF8B5 /* Pods_GOKTest.framework */; };
+		FFB30E682828D99500FBF8B5 /* GOKUnitSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB30E672828D99500FBF8B5 /* GOKUnitSpecs.swift */; };
+		FFC11A262828DBEB00CF8F14 /* MainViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC11A252828DBEB00CF8F14 /* MainViewModelMock.swift */; };
 		FFC5AF7724F99EE30087DC02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5AF7624F99EE30087DC02 /* AppDelegate.swift */; };
 		FFC5AF7924F99EE30087DC02 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC5AF7824F99EE30087DC02 /* SceneDelegate.swift */; };
 		FFC5AF8324F99EE30087DC02 /* GOKTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FFC5AF8124F99EE30087DC02 /* GOKTest.xcdatamodeld */; };
@@ -57,8 +69,20 @@
 		FFE0841A2826BD4D00B43250 /* MainEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE084192826BD4D00B43250 /* MainEndpoint.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		FFB30E692828D99500FBF8B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FFC5AF6B24F99EE30087DC02 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FFC5AF7224F99EE30087DC02;
+			remoteInfo = GOKTest;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		008FCDFB27922B57C6B65745 /* Pods_GOKTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GOKTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0219918CFB89C4A69B07CFE0 /* Pods-GOKUnitSpecs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GOKUnitSpecs.debug.xcconfig"; path = "Target Support Files/Pods-GOKUnitSpecs/Pods-GOKUnitSpecs.debug.xcconfig"; sourceTree = "<group>"; };
+		1DC5833DC53F0C7EEB6D1271 /* Pods_GOKUnitSpecs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GOKUnitSpecs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C767CABB1F9CA01E8F283A4 /* Pods-GOKTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GOKTest.debug.xcconfig"; path = "Target Support Files/Pods-GOKTest/Pods-GOKTest.debug.xcconfig"; sourceTree = "<group>"; };
 		2FF1C2D94EE85CF872641E5D /* Pods-GOKTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GOKTestTests.release.xcconfig"; path = "Target Support Files/Pods-GOKTestTests/Pods-GOKTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		3A69BA41A59DE196766A2DC2 /* Pods_GOKTest_GOKUISpecs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GOKTest_GOKUISpecs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +95,7 @@
 		72F828B0012D775C0882682A /* Pods-GOKSpecs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GOKSpecs.debug.xcconfig"; path = "Target Support Files/Pods-GOKSpecs/Pods-GOKSpecs.debug.xcconfig"; sourceTree = "<group>"; };
 		782257640F2601EC6111185B /* Pods-GOKSpecs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GOKSpecs.release.xcconfig"; path = "Target Support Files/Pods-GOKSpecs/Pods-GOKSpecs.release.xcconfig"; sourceTree = "<group>"; };
 		7C5246E5210B8F0B5F56DFD6 /* Pods-GOKTest-GOKTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GOKTest-GOKTestUITests.debug.xcconfig"; path = "Target Support Files/Pods-GOKTest-GOKTestUITests/Pods-GOKTest-GOKTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A33CC2CF5B9D69176FF7344F /* Pods-GOKUnitSpecs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GOKUnitSpecs.release.xcconfig"; path = "Target Support Files/Pods-GOKUnitSpecs/Pods-GOKUnitSpecs.release.xcconfig"; sourceTree = "<group>"; };
 		A4594AA535A04184656C2E65 /* Pods-GOKTestTests2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GOKTestTests2.release.xcconfig"; path = "Target Support Files/Pods-GOKTestTests2/Pods-GOKTestTests2.release.xcconfig"; sourceTree = "<group>"; };
 		B0D8B0A30DCACB8815D620C9 /* Pods_GOKTestTests2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GOKTestTests2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C207C7B988540B2D7B72A48B /* Pods_GOKTest_GOKTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GOKTest_GOKTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,7 +104,19 @@
 		FF1A94FC250024A300E8E680 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		FF1A950025006F1A00E8E680 /* MainViewController+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+Loading.swift"; sourceTree = "<group>"; };
 		FF3C8B0424FAF34E007FCFCE /* MainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainService.swift; sourceTree = "<group>"; };
+		FF414D1E2829441E006E6434 /* DigioModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioModelMock.swift; sourceTree = "<group>"; };
+		FF414D24282948E5006E6434 /* MainViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelSpec.swift; sourceTree = "<group>"; };
+		FF414D262829495E006E6434 /* MainServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainServiceMock.swift; sourceTree = "<group>"; };
+		FF414D2A28294C57006E6434 /* MainViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerMock.swift; sourceTree = "<group>"; };
+		FF414D2C28294F0F006E6434 /* Spotlight+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Spotlight+Mock.swift"; sourceTree = "<group>"; };
+		FF414D2E28294FF8006E6434 /* MainNavigationListenerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationListenerMock.swift; sourceTree = "<group>"; };
+		FF414D3028295174006E6434 /* Cash+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cash+Mock.swift"; sourceTree = "<group>"; };
+		FF414D32282951E3006E6434 /* Product+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+Mock.swift"; sourceTree = "<group>"; };
 		FFB30E5E2828D79D00FBF8B5 /* Pods_GOKTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_GOKTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFB30E652828D99500FBF8B5 /* GOKUnitSpecs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GOKUnitSpecs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFB30E672828D99500FBF8B5 /* GOKUnitSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOKUnitSpecs.swift; sourceTree = "<group>"; };
+		FFC11A222828DBC900CF8F14 /* MainViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerSpec.swift; sourceTree = "<group>"; };
+		FFC11A252828DBEB00CF8F14 /* MainViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelMock.swift; sourceTree = "<group>"; };
 		FFC5AF7324F99EE30087DC02 /* GOKTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GOKTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFC5AF7624F99EE30087DC02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFC5AF7824F99EE30087DC02 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +166,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FFB30E622828D99500FBF8B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B50ECED0CB3FE54D3D348838 /* Pods_GOKUnitSpecs.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FFC5AF7024F99EE30087DC02 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -155,6 +200,8 @@
 				782257640F2601EC6111185B /* Pods-GOKSpecs.release.xcconfig */,
 				680A14301786B1DB2A4E0C64 /* Pods-GOKTest-GOKUISpecs.debug.xcconfig */,
 				C3EF9EC95F0C0FFF7155E8E3 /* Pods-GOKTest-GOKUISpecs.release.xcconfig */,
+				0219918CFB89C4A69B07CFE0 /* Pods-GOKUnitSpecs.debug.xcconfig */,
+				A33CC2CF5B9D69176FF7344F /* Pods-GOKUnitSpecs.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -169,6 +216,7 @@
 				B0D8B0A30DCACB8815D620C9 /* Pods_GOKTestTests2.framework */,
 				68BA3991BECECE3E8A6DC7FF /* Pods_GOKSpecs.framework */,
 				3A69BA41A59DE196766A2DC2 /* Pods_GOKTest_GOKUISpecs.framework */,
+				1DC5833DC53F0C7EEB6D1271 /* Pods_GOKUnitSpecs.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -191,10 +239,61 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		FF414D2028294890006E6434 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FF414D23282948D0006E6434 /* ViewModel */,
+				FF414D22282948C9006E6434 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		FF414D22282948C9006E6434 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FFC11A222828DBC900CF8F14 /* MainViewControllerSpec.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FF414D23282948D0006E6434 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FF414D24282948E5006E6434 /* MainViewModelSpec.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FFB30E662828D99500FBF8B5 /* GOKUnitSpecs */ = {
+			isa = PBXGroup;
+			children = (
+				FFC11A242828DBDD00CF8F14 /* Mocks */,
+				FF414D2028294890006E6434 /* Main */,
+				FFB30E672828D99500FBF8B5 /* GOKUnitSpecs.swift */,
+			);
+			path = GOKUnitSpecs;
+			sourceTree = "<group>";
+		};
+		FFC11A242828DBDD00CF8F14 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				FFC11A252828DBEB00CF8F14 /* MainViewModelMock.swift */,
+				FF414D1E2829441E006E6434 /* DigioModelMock.swift */,
+				FF414D262829495E006E6434 /* MainServiceMock.swift */,
+				FF414D2A28294C57006E6434 /* MainViewControllerMock.swift */,
+				FF414D2C28294F0F006E6434 /* Spotlight+Mock.swift */,
+				FF414D2E28294FF8006E6434 /* MainNavigationListenerMock.swift */,
+				FF414D3028295174006E6434 /* Cash+Mock.swift */,
+				FF414D32282951E3006E6434 /* Product+Mock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		FFC5AF6A24F99EE30087DC02 = {
 			isa = PBXGroup;
 			children = (
 				FFC5AF7524F99EE30087DC02 /* GOKTest */,
+				FFB30E662828D99500FBF8B5 /* GOKUnitSpecs */,
 				FFC5AF7424F99EE30087DC02 /* Products */,
 				487032C53C8C8D3A71943075 /* Pods */,
 				5C93CD9443AFA9071B3ABF2A /* Frameworks */,
@@ -205,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				FFC5AF7324F99EE30087DC02 /* GOKTest.app */,
+				FFB30E652828D99500FBF8B5 /* GOKUnitSpecs.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -425,6 +525,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		FFB30E642828D99500FBF8B5 /* GOKUnitSpecs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFB30E6B2828D99500FBF8B5 /* Build configuration list for PBXNativeTarget "GOKUnitSpecs" */;
+			buildPhases = (
+				853A059E7973F31E1918E60B /* [CP] Check Pods Manifest.lock */,
+				FFB30E612828D99500FBF8B5 /* Sources */,
+				FFB30E622828D99500FBF8B5 /* Frameworks */,
+				FFB30E632828D99500FBF8B5 /* Resources */,
+				0274432930D945EEF0B24B7C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FFB30E6A2828D99500FBF8B5 /* PBXTargetDependency */,
+			);
+			name = GOKUnitSpecs;
+			productName = GOKUnitSpecs;
+			productReference = FFB30E652828D99500FBF8B5 /* GOKUnitSpecs.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		FFC5AF7224F99EE30087DC02 /* GOKTest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FFC5AFA224F99EE70087DC02 /* Build configuration list for PBXNativeTarget "GOKTest" */;
@@ -450,9 +570,13 @@
 		FFC5AF6B24F99EE30087DC02 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1170;
+				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
+					FFB30E642828D99500FBF8B5 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = FFC5AF7224F99EE30087DC02;
+					};
 					FFC5AF7224F99EE30087DC02 = {
 						CreatedOnToolsVersion = 12.0;
 					};
@@ -472,11 +596,19 @@
 			projectRoot = "";
 			targets = (
 				FFC5AF7224F99EE30087DC02 /* GOKTest */,
+				FFB30E642828D99500FBF8B5 /* GOKUnitSpecs */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FFB30E632828D99500FBF8B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FFC5AF7124F99EE30087DC02 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -489,6 +621,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0274432930D945EEF0B24B7C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GOKUnitSpecs/Pods-GOKUnitSpecs-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GOKUnitSpecs/Pods-GOKUnitSpecs-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GOKUnitSpecs/Pods-GOKUnitSpecs-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		58936AB9B7759A3C922AE948 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -528,9 +677,49 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GOKTest/Pods-GOKTest-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		853A059E7973F31E1918E60B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GOKUnitSpecs-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FFB30E612828D99500FBF8B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF414D272829495E006E6434 /* MainServiceMock.swift in Sources */,
+				FFB30E682828D99500FBF8B5 /* GOKUnitSpecs.swift in Sources */,
+				FF414D2D28294F0F006E6434 /* Spotlight+Mock.swift in Sources */,
+				FFC11A262828DBEB00CF8F14 /* MainViewModelMock.swift in Sources */,
+				FF414D1F2829441E006E6434 /* DigioModelMock.swift in Sources */,
+				FF414D33282951E3006E6434 /* Product+Mock.swift in Sources */,
+				FF414D2F28294FF8006E6434 /* MainNavigationListenerMock.swift in Sources */,
+				FF414D25282948E5006E6434 /* MainViewModelSpec.swift in Sources */,
+				FF414D2B28294C57006E6434 /* MainViewControllerMock.swift in Sources */,
+				FF414D3128295174006E6434 /* Cash+Mock.swift in Sources */,
+				FF3741792828E0E900E5DFA6 /* MainViewControllerSpec.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FFC5AF6F24F99EE30087DC02 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -585,6 +774,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		FFB30E6A2828D99500FBF8B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FFC5AF7224F99EE30087DC02 /* GOKTest */;
+			targetProxy = FFB30E692828D99500FBF8B5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		FFC5AF8624F99EE60087DC02 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -597,6 +794,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		FFB30E6C2828D99500FBF8B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0219918CFB89C4A69B07CFE0 /* Pods-GOKUnitSpecs.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 94FPCH4ZZA;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = danilorequena.GOKUnitSpecs;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GOKTest.app/GOKTest";
+			};
+			name = Debug;
+		};
+		FFB30E6D2828D99500FBF8B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A33CC2CF5B9D69176FF7344F /* Pods-GOKUnitSpecs.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 94FPCH4ZZA;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = danilorequena.GOKUnitSpecs;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GOKTest.app/GOKTest";
+			};
+			name = Release;
+		};
 		FFC5AFA024F99EE70087DC02 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -648,7 +887,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -703,7 +942,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -721,12 +960,21 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SM9KCJGMUP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Kingfisher\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Quick\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Nimble\"",
+					"$(PROJECT_DIR)",
+					"-lswiftXCTest",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/GOKTest/Root/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = dobigaster.GOKTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -742,12 +990,19 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SM9KCJGMUP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Kingfisher\"",
+					"$(PROJECT_DIR)",
+					"-lswiftXCTest",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/GOKTest/Root/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = dobigaster.GOKTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -758,6 +1013,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FFB30E6B2828D99500FBF8B5 /* Build configuration list for PBXNativeTarget "GOKUnitSpecs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFB30E6C2828D99500FBF8B5 /* Debug */,
+				FFB30E6D2828D99500FBF8B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FFC5AF6E24F99EE30087DC02 /* Build configuration list for PBXProject "GOKTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

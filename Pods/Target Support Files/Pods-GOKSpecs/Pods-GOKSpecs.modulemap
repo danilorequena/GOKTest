@@ -1,6 +1,0 @@
-framework module Pods_GOKSpecs {
-  umbrella header "Pods-GOKSpecs-umbrella.h"
-
-  export *
-  module * { export * }
-}

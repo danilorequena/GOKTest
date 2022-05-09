@@ -16,17 +16,16 @@ func shortCategoryName(_ category: UIContentSizeCategory) -> String {
 }
 
 func combinePredicates<T>(_ predicates: [Predicate<T>],
+                          ignoreFailures: Bool = false,
                           deferred: (() -> Void)? = nil) -> Predicate<T> {
-    return Predicate { actualExpression in
+    return Predicate.fromDeprecatedClosure { actualExpression, failureMessage in
         defer {
             deferred?()
         }
 
-        let result = PredicateResult(status: .fail, message: .fail(""))
-        return try predicates.reduce(result) { _, matcher -> PredicateResult in
-            let result = try matcher.satisfies(actualExpression)
-            return PredicateResult(status: PredicateStatus(bool: result.status == .matches),
-                                   message: result.message)
+        return try predicates.allSatisfy { matcher -> Bool in
+            guard ignoreFailures else { return false }
+            return try matcher.matches(actualExpression, failureMessage: failureMessage)
         }
     }
 }
@@ -44,7 +43,7 @@ public func haveValidDynamicTypeSnapshot(named name: String? = nil,
         let sanitizedName = sanitizedTestName(name)
         let nameWithCategory = "\(sanitizedName)_\(shortCategoryName(category))"
 
-        return Predicate { actualExpression in
+        return Predicate.fromDeprecatedClosure { actualExpression, failureMessage in
             mock.mockPreferredContentSizeCategory(category)
             updateTraitCollection(on: actualExpression)
 
@@ -61,7 +60,7 @@ public func haveValidDynamicTypeSnapshot(named name: String? = nil,
                                               tolerance: tolerance)
             }
 
-            return try predicate.satisfies(actualExpression)
+            return try predicate.matches(actualExpression, failureMessage: failureMessage)
         }
     }
 
@@ -81,7 +80,7 @@ public func recordDynamicTypeSnapshot(named name: String? = nil,
         let sanitizedName = sanitizedTestName(name)
         let nameWithCategory = "\(sanitizedName)_\(shortCategoryName(category))"
 
-        return Predicate { actualExpression in
+        return Predicate.fromDeprecatedClosure { actualExpression, failureMessage in
             mock.mockPreferredContentSizeCategory(category)
             updateTraitCollection(on: actualExpression)
 
@@ -94,11 +93,11 @@ public func recordDynamicTypeSnapshot(named name: String? = nil,
                 predicate = recordSnapshot(named: nameWithCategory, identifier: identifier, usesDrawRect: usesDrawRect)
             }
 
-            return try predicate.satisfies(actualExpression)
+            return try predicate.matches(actualExpression, failureMessage: failureMessage)
         }
     }
 
-    return combinePredicates(predicates) {
+    return combinePredicates(predicates, ignoreFailures: true) {
         mock.stopMockingPreferredContentSizeCategory()
     }
 }

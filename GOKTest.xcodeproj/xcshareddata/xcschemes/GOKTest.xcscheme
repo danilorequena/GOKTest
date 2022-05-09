@@ -20,6 +20,20 @@
                ReferencedContainer = "container:GOKTest.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FFB30E642828D99500FBF8B5"
+               BuildableName = "GOKUnitSpecs.xctest"
+               BlueprintName = "GOKUnitSpecs"
+               ReferencedContainer = "container:GOKTest.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -32,19 +46,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FF5997F42501632E00A51DC7"
-               BuildableName = "GOKSpecs.xctest"
-               BlueprintName = "GOKSpecs"
-               ReferencedContainer = "container:GOKTest.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FF5998022501634400A51DC7"
-               BuildableName = "GOKUISpecs.xctest"
-               BlueprintName = "GOKUISpecs"
+               BlueprintIdentifier = "FFB30E642828D99500FBF8B5"
+               BuildableName = "GOKUnitSpecs.xctest"
+               BlueprintName = "GOKUnitSpecs"
                ReferencedContainer = "container:GOKTest.xcodeproj">
             </BuildableReference>
          </TestableReference>
