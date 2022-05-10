@@ -21,4 +21,3 @@ extension CodeView {
 
     public func setupAdditionalConfiguration() {}
 }
-

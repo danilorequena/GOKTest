@@ -135,4 +135,3 @@ extension UILabel {
         attributedText = attrStr
     }
 }
-

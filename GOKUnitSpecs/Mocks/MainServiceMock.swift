@@ -13,7 +13,7 @@ import GOKTest
 final class MainServiceMock: MainServiceProtocol {
     var dataResult: Result<DigioModel, ApiServiceError>?
     
-    func fetchData(completion: @escaping (Result<DigioModel, ApiServiceError>) -> ()) {
+    func fetchData(completion: @escaping (Result<DigioModel, ApiServiceError>) -> Void) {
         if let result = dataResult {
             completion(result)
         }

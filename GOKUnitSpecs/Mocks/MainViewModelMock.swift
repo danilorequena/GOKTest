@@ -14,7 +14,6 @@ final class MainViewModelMock: MainViewModelProtocol {
     private(set) var hasCalledGoToBanner = false
     private(set) var hasCalledgGoToProduct = false
 
-    
     func fetchData() {
         hasCalledFetchData = true
     }

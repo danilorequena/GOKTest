@@ -188,4 +188,3 @@ extension DigioCollectionViewDataSource {
         }
     }
 }
-

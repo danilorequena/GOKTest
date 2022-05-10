@@ -51,5 +51,3 @@ final class SpotlightViewSection: Section {
         delegate?.didSelectSpotlight(spotlight: spotlight)
     }
 }
-
-

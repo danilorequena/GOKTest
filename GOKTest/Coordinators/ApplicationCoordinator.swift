@@ -13,21 +13,20 @@ class ApplicationCoordinator: Coordinator {
     
     init (window: UIWindow ) {
         self .window = window
-        rootViewController = UINavigationController ()
+        rootViewController = UINavigationController()
         rootViewController.navigationBar.prefersLargeTitles = true
-        
         
         let viewModel = MainViewModel()
         let mainViewController = MainViewController(viewModel: viewModel)
         
         viewModel.view = mainViewController
         viewModel.navigationListener = self
-        rootViewController.pushViewController (mainViewController, animated: false )
+        rootViewController.pushViewController(mainViewController, animated: false )
     }
     
     func  start() {
         window.rootViewController = rootViewController
-        window.makeKeyAndVisible ()
+        window.makeKeyAndVisible()
     }
 }
 
@@ -53,4 +52,3 @@ extension ApplicationCoordinator: MainViewNavigationListener {
         rootViewController.pushViewController(viewController, animated: true)
     }
 }
-

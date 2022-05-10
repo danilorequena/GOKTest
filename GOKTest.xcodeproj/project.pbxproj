@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B50ECED0CB3FE54D3D348838 /* Pods_GOKUnitSpecs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DC5833DC53F0C7EEB6D1271 /* Pods_GOKUnitSpecs.framework */; };
 		FF1A94FD250024A300E8E680 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A94FC250024A300E8E680 /* UIView+Extension.swift */; };
-		FF1A950125006F1A00E8E680 /* MainViewController+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A950025006F1A00E8E680 /* MainViewController+Loading.swift */; };
 		FF3741792828E0E900E5DFA6 /* MainViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC11A222828DBC900CF8F14 /* MainViewControllerSpec.swift */; };
 		FF3C8B0524FAF34E007FCFCE /* MainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3C8B0424FAF34E007FCFCE /* MainService.swift */; };
 		FF414D1F2829441E006E6434 /* DigioModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF414D1E2829441E006E6434 /* DigioModelMock.swift */; };
@@ -110,7 +109,6 @@
 		C3EF9EC95F0C0FFF7155E8E3 /* Pods-GOKTest-GOKUISpecs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GOKTest-GOKUISpecs.release.xcconfig"; path = "Target Support Files/Pods-GOKTest-GOKUISpecs/Pods-GOKTest-GOKUISpecs.release.xcconfig"; sourceTree = "<group>"; };
 		ED3B2888B4B09E81F6E2FDBC /* Pods-GOKTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GOKTestTests.debug.xcconfig"; path = "Target Support Files/Pods-GOKTestTests/Pods-GOKTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FF1A94FC250024A300E8E680 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		FF1A950025006F1A00E8E680 /* MainViewController+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+Loading.swift"; sourceTree = "<group>"; };
 		FF3C8B0424FAF34E007FCFCE /* MainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainService.swift; sourceTree = "<group>"; };
 		FF414D1E2829441E006E6434 /* DigioModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioModelMock.swift; sourceTree = "<group>"; };
 		FF414D24282948E5006E6434 /* MainViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelSpec.swift; sourceTree = "<group>"; };
@@ -241,7 +239,6 @@
 			isa = PBXGroup;
 			children = (
 				FF1A94FC250024A300E8E680 /* UIView+Extension.swift */,
-				FF1A950025006F1A00E8E680 /* MainViewController+Loading.swift */,
 				FFE083F12825AD0C00B43250 /* UIView+Constraints.swift */,
 				FFE083FB2825B11700B43250 /* NSObject+DescribeProtocol.swift */,
 				FFE0840C2825B75600B43250 /* UICollectionView+Extension.swift */,
@@ -820,7 +817,6 @@
 				FFE0840B2825B65400B43250 /* SpotlightViewSection.swift in Sources */,
 				FFD8B8B824FB24B90080D500 /* MainViewModel.swift in Sources */,
 				FFC5AFB924F9A0B10087DC02 /* Products.swift in Sources */,
-				FF1A950125006F1A00E8E680 /* MainViewController+Loading.swift in Sources */,
 				FFC5AFB524F9A0910087DC02 /* DigioModel.swift in Sources */,
 				FFE0841A2826BD4D00B43250 /* MainEndpoint.swift in Sources */,
 				FFCB79042828BC9E0004F33E /* MainViewNavigationListener.swift in Sources */,

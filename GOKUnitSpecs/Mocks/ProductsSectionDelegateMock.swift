@@ -17,4 +17,3 @@ final class ProductsSectionDelegateMock: ProductsSectionDelegate {
         hasCalledDidTapProduct = true
     }
 }
-

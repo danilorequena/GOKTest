@@ -55,7 +55,6 @@ extension DetailViewController: CodeView {
         )
         bannerImageView.anchor(height: 200)
         
-        
         descriptionLabel.anchor(
             top: bannerImageView.bottomAnchor,
             leading: view.leadingAnchor,

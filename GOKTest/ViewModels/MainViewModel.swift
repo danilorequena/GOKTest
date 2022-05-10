@@ -28,7 +28,6 @@ final class MainViewModel: MainViewModelProtocol {
         self.service = service
     }
     
-
     func fetchData() {
         service.fetchData { [weak self] result in
             guard let self = self else { return }
@@ -53,6 +52,3 @@ final class MainViewModel: MainViewModelProtocol {
         navigationListener?.goToProduct(product: product)
     }
 }
-
-
-
