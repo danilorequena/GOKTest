@@ -8,7 +8,7 @@
 import Foundation
 
 protocol MainServiceProtocol: AnyObject {
-    func fetchData(completion: @escaping (Result<DigioModel, ApiServiceError>) -> ())
+    func fetchData(completion: @escaping (Result<DigioModel, ApiServiceError>) -> Void)
 }
 
 final class MainService: MainServiceProtocol {
@@ -18,7 +18,7 @@ final class MainService: MainServiceProtocol {
     private let urlSession = URLSession.shared
     private let jsonDecoder = JSONDecoder()
     
-    func fetchData(completion: @escaping (Result<DigioModel, ApiServiceError>) -> ()) {
+    func fetchData(completion: @escaping (Result<DigioModel, ApiServiceError>) -> Void) {
         let endpoint = MainEndpoint()
         guard let url = URL(string: "\(endpoint.path)") else {
             completion(.failure(.invalidEndpoint))
@@ -28,9 +28,7 @@ final class MainService: MainServiceProtocol {
         loadURLAndDecode(url: url, completion: completion)
     }
     
-    
-    
-    private func loadURLAndDecode<D: Decodable>(url: URL, params: [String : String]? = nil, completion: @escaping (Result<D, ApiServiceError>) -> ()) {
+    private func loadURLAndDecode<D: Decodable>(url: URL, params: [String : String]? = nil, completion: @escaping (Result<D, ApiServiceError>) -> Void) {
         guard let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
             completion(.failure(.invalidEndpoint))
             return
@@ -67,7 +65,7 @@ final class MainService: MainServiceProtocol {
         }.resume()
     }
     
-    private func executeCompletionHandler<D: Decodable>(with result: Result<D, ApiServiceError>, completion: @escaping (Result<D, ApiServiceError>) -> ()) {
+    private func executeCompletionHandler<D: Decodable>(with result: Result<D, ApiServiceError>, completion: @escaping (Result<D, ApiServiceError>) -> Void) {
         DispatchQueue.main.async {
             completion(result)
         }

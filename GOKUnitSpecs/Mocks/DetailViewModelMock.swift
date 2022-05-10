@@ -15,4 +15,3 @@ final class DetailViewModelMock: DetailViewModelProtocol {
         hasCalledSetupData = true
     }
 }
-
